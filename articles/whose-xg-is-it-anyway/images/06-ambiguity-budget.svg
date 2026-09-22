@@ -1,20 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
-<rect width="1200" height="675" fill="#f7f7f4"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="#fbfaf7"/>
 <style>
-  .title{font:700 48px Inter,Arial,sans-serif;fill:#102033}
-  .h{font:700 30px Inter,Arial,sans-serif;fill:#102033}
-  .b{font:400 23px Inter,Arial,sans-serif;fill:#2b3b4c}
-  .s{font:600 19px Inter,Arial,sans-serif;fill:#415160}
-  .tiny{font:500 16px Inter,Arial,sans-serif;fill:#53616d}
+.title{font:700 58px Inter,Arial,sans-serif;fill:#10243a}.sub{font:400 27px Inter,Arial,sans-serif;fill:#536277}
+.axis{font:700 24px Inter,Arial,sans-serif;fill:#10243a}.label{font:600 23px Inter,Arial,sans-serif;fill:#10243a}
+.small{font:500 20px Inter,Arial,sans-serif;fill:#536277}.call{font:600 24px Inter,Arial,sans-serif;fill:#376b96}
 </style>
-<text x="55" y="78" class="title">The ambiguity budget</text>
-<text x="55" y="118" class="b">Different decisions tolerate different levels of uncertainty.</text>
-<line x1="115" y1="560" x2="1100" y2="560" stroke="#223744" stroke-width="3"/>
-<line x1="115" y1="560" x2="115" y2="170" stroke="#223744" stroke-width="3"/>
-<text x="590" y="625" text-anchor="middle" class="s">Tolerance for ambiguity →</text>
-<text x="40" y="360" transform="rotate(-90 40 360)" text-anchor="middle" class="s">Need for correctness &amp; auditability →</text>
-<path d="M115 190 L1100 500 L1100 560 L115 560 Z" fill="#e8f0f5"/>
-<path d="M115 190 L1100 500" stroke="#8eb7c6" stroke-width="4"/>
-<circle cx="205" cy="230" r="10" fill="#186f8d"/><text x="223" y="237" class="tiny">Trading</text><circle cx="270" cy="285" r="10" fill="#186f8d"/><text x="288" y="292" class="tiny">Regulatory reporting</text><circle cx="360" cy="335" r="10" fill="#186f8d"/><text x="378" y="342" class="tiny">Risk decisions</text><circle cx="500" cy="400" r="10" fill="#186f8d"/><text x="518" y="407" class="tiny">Credit decisions</text><circle cx="650" cy="455" r="10" fill="#186f8d"/><text x="668" y="462" class="tiny">Portfolio analytics</text><circle cx="825" cy="500" r="10" fill="#186f8d"/><text x="843" y="507" class="tiny">Talent scouting</text><circle cx="970" cy="530" r="10" fill="#186f8d"/><text x="988" y="537" class="tiny">Content generation</text>
-<text x="780" y="205" class="b">More authority → smaller ambiguity budget</text>
+<text x="60" y="82" class="title">The ambiguity budget</text>
+<text x="60" y="126" class="sub">Different decisions tolerate different levels of uncertainty.</text>
+
+<!-- plot -->
+<line x1="150" y1="720" x2="1100" y2="720" stroke="#15324b" stroke-width="4"/>
+<path d="M1100 720 l-18 -11 v22 z" fill="#15324b"/>
+<line x1="150" y1="720" x2="150" y2="205" stroke="#15324b" stroke-width="4"/>
+<path d="M150 205 l-11 18 h22 z" fill="#15324b"/>
+
+<text x="625" y="790" text-anchor="middle" class="axis">Tolerance for ambiguity →</text>
+<text x="55" y="470" transform="rotate(-90 55 470)" text-anchor="middle" class="axis">Need for correctness &amp; auditability →</text>
+<text x="150" y="755" text-anchor="middle" class="small">LOWER</text>
+<text x="1090" y="755" text-anchor="middle" class="small">HIGHER</text>
+<text x="105" y="230" text-anchor="end" class="small">HIGHER</text>
+<text x="105" y="705" text-anchor="end" class="small">LOWER</text>
+
+<path d="M150 255 L1050 660 L1050 720 L150 720 Z" fill="#e8f2f7"/>
+<path d="M150 255 L1050 660" stroke="#4e9bc2" stroke-width="4"/>
+
+<circle cx="235" cy="300" r="14" fill="#1285b0" stroke="white" stroke-width="4"/><text x="260" y="308" class="label">Trading</text><circle cx="355" cy="360" r="14" fill="#1285b0" stroke="white" stroke-width="4"/><text x="380" y="368" class="label">Regulatory reporting</text><circle cx="485" cy="425" r="14" fill="#1285b0" stroke="white" stroke-width="4"/><text x="510" y="433" class="label">Risk decisions</text><circle cx="620" cy="487" r="14" fill="#1285b0" stroke="white" stroke-width="4"/><text x="645" y="495" class="label">Credit decisions</text><circle cx="760" cy="550" r="14" fill="#1285b0" stroke="white" stroke-width="4"/><text x="785" y="558" class="label">Portfolio analytics</text><circle cx="900" cy="610" r="14" fill="#1285b0" stroke="white" stroke-width="4"/><text x="925" y="618" class="label">Talent scouting</text><circle cx="1020" cy="650" r="14" fill="#1285b0" stroke="white" stroke-width="4"/><text x="1045" y="658" class="label">Content generation</text>
+
+<rect x="690" y="190" width="425" height="72" rx="18" fill="#eef5fa"/>
+<text x="902" y="234" text-anchor="middle" class="call">More authority → smaller ambiguity budget</text>
+
+<text x="60" y="852" class="small">The exact placement is illustrative: the design question is how much uncertainty a workflow can tolerate before it must stop or escalate.</text>
 </svg>
