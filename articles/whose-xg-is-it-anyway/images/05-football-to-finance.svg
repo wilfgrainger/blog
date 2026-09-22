@@ -1,18 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
-<rect width="1200" height="675" fill="#f7f7f4"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="#fbfaf7"/>
 <style>
-  .title{font:700 48px Inter,Arial,sans-serif;fill:#102033}
-  .h{font:700 30px Inter,Arial,sans-serif;fill:#102033}
-  .b{font:400 23px Inter,Arial,sans-serif;fill:#2b3b4c}
-  .s{font:600 19px Inter,Arial,sans-serif;fill:#415160}
-  .tiny{font:500 16px Inter,Arial,sans-serif;fill:#53616d}
+.title{font:700 58px Inter,Arial,sans-serif;fill:#10243a}.sub{font:400 27px Inter,Arial,sans-serif;fill:#536277}
+.col{font:700 40px Inter,Arial,sans-serif;fill:#10243a}.item{font:700 27px Inter,Arial,sans-serif;fill:#10243a}
+.note{font:400 22px Inter,Arial,sans-serif;fill:#536277}.foot{font:600 23px Inter,Arial,sans-serif;fill:#405267}
 </style>
-<text x="55" y="78" class="title">Same problem, different domain</text>
-<text x="55" y="118" class="b">The nouns change. The semantic problem does not.</text>
-<rect x="55" y="165" width="480" height="390" rx="20" fill="#e6eff9"/>
-<rect x="665" y="165" width="480" height="390" rx="20" fill="#fff0df"/>
-<text x="95" y="225" class="h">⚽ Football</text>
-<text x="705" y="225" class="h">Finance</text>
-<text x="95" y="285" class="b">Player</text><text x="705" y="285" class="b">Issuer</text><path d="M430 277 L660 277" stroke="#7e8c95" stroke-width="2"/><path d="M635 265 L660 277 L635 289" fill="none" stroke="#7e8c95" stroke-width="2"/><text x="95" y="343" class="b">Club</text><text x="705" y="343" class="b">Legal entity</text><path d="M430 335 L660 335" stroke="#7e8c95" stroke-width="2"/><path d="M635 323 L660 335 L635 347" fill="none" stroke="#7e8c95" stroke-width="2"/><text x="95" y="401" class="b">Registration</text><text x="705" y="401" class="b">Ownership relationship</text><path d="M430 393 L660 393" stroke="#7e8c95" stroke-width="2"/><path d="M635 381 L660 393 L635 405" fill="none" stroke="#7e8c95" stroke-width="2"/><text x="95" y="459" class="b">Appearance</text><text x="705" y="459" class="b">Transaction / event</text><path d="M430 451 L660 451" stroke="#7e8c95" stroke-width="2"/><path d="M635 439 L660 451 L635 463" fill="none" stroke="#7e8c95" stroke-width="2"/><text x="95" y="517" class="b">xG</text><text x="705" y="517" class="b">Risk or valuation metric</text><path d="M430 509 L660 509" stroke="#7e8c95" stroke-width="2"/><path d="M635 497 L660 509 L635 521" fill="none" stroke="#7e8c95" stroke-width="2"/>
-<text x="55" y="620" class="b">Different domains. Same challenge: shared meaning before consequential action.</text>
+<text x="60" y="82" class="title">Same problem, different domain</text>
+<text x="60" y="126" class="sub">The nouns change. The semantic problem does not.</text>
+
+<rect x="60" y="175" width="470" height="580" rx="30" fill="#e7f1fb" stroke="#c3d9eb" stroke-width="2"/>
+<rect x="670" y="175" width="470" height="580" rx="30" fill="#fff0df" stroke="#efd1ae" stroke-width="2"/>
+<circle cx="115" cy="232" r="28" fill="#2776a8"/><text x="115" y="242" text-anchor="middle" font-family="Arial" font-size="27" fill="white" font-weight="700">F</text>
+<text x="165" y="246" class="col">Football</text>
+<circle cx="725" cy="232" r="28" fill="#a66824"/><text x="725" y="242" text-anchor="middle" font-family="Arial" font-size="27" fill="white" font-weight="700">£</text>
+<text x="775" y="246" class="col">Finance</text>
+
+
+<rect x="90" y="282" width="410" height="66" rx="16" fill="#f6fbff"/>
+<text x="120" y="326" class="item">Player</text>
+<rect x="700" y="282" width="410" height="66" rx="16" fill="#fff9f0"/>
+<text x="730" y="326" class="item">Issuer</text>
+<path d="M515 315 H655" stroke="#73818b" stroke-width="3"/>
+<path d="M640 302 L657 315 L640 328" fill="none" stroke="#73818b" stroke-width="3"/>
+
+<rect x="90" y="370" width="410" height="66" rx="16" fill="#f6fbff"/>
+<text x="120" y="414" class="item">Club</text>
+<rect x="700" y="370" width="410" height="66" rx="16" fill="#fff9f0"/>
+<text x="730" y="414" class="item">Legal entity</text>
+<path d="M515 403 H655" stroke="#73818b" stroke-width="3"/>
+<path d="M640 390 L657 403 L640 416" fill="none" stroke="#73818b" stroke-width="3"/>
+
+<rect x="90" y="458" width="410" height="66" rx="16" fill="#f6fbff"/>
+<text x="120" y="502" class="item">Registration</text>
+<rect x="700" y="458" width="410" height="66" rx="16" fill="#fff9f0"/>
+<text x="730" y="502" class="item">Ownership relationship</text>
+<path d="M515 491 H655" stroke="#73818b" stroke-width="3"/>
+<path d="M640 478 L657 491 L640 504" fill="none" stroke="#73818b" stroke-width="3"/>
+
+<rect x="90" y="546" width="410" height="66" rx="16" fill="#f6fbff"/>
+<text x="120" y="590" class="item">Appearance</text>
+<rect x="700" y="546" width="410" height="66" rx="16" fill="#fff9f0"/>
+<text x="730" y="590" class="item">Transaction / event</text>
+<path d="M515 579 H655" stroke="#73818b" stroke-width="3"/>
+<path d="M640 566 L657 579 L640 592" fill="none" stroke="#73818b" stroke-width="3"/>
+
+<rect x="90" y="634" width="410" height="66" rx="16" fill="#f6fbff"/>
+<text x="120" y="678" class="item">xG</text>
+<rect x="700" y="634" width="410" height="66" rx="16" fill="#fff9f0"/>
+<text x="730" y="678" class="item">Risk or valuation metric</text>
+<path d="M515 667 H655" stroke="#73818b" stroke-width="3"/>
+<path d="M640 654 L657 667 L640 680" fill="none" stroke="#73818b" stroke-width="3"/>
+
+
+<line x1="60" y1="806" x2="1140" y2="806" stroke="#d1d9de" stroke-width="2"/>
+<text x="600" y="850" text-anchor="middle" class="foot">Different domains. Same challenge: shared meaning before consequential action.</text>
 </svg>
