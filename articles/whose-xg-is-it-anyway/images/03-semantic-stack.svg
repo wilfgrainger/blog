@@ -2,7 +2,7 @@
 <rect width="1200" height="900" fill="#fbfaf7"/>
 <style>
 .title{font:700 58px Inter,Arial,sans-serif;fill:#10243a}.sub{font:400 27px Inter,Arial,sans-serif;fill:#536277}
-.cardTitle{font:700 31px Inter,Arial,sans-serif;fill:#10243a}.tag{font:700 20px Inter,Arial,sans-serif;fill:#294761}
+.cardTitle{font:700 29px Inter,Arial,sans-serif;fill:#10243a}.tag{font:700 20px Inter,Arial,sans-serif;fill:#294761}
 .body{font:400 23px Inter,Arial,sans-serif;fill:#405267}.num{font:800 24px Inter,Arial,sans-serif;fill:white}
 .footer{font:500 23px Inter,Arial,sans-serif;fill:#405267}
 </style>
@@ -46,16 +46,16 @@
 <!-- 5 -->
 <rect x="435" y="485" width="330" height="235" rx="24" fill="#fff0df" stroke="#efd1ae" stroke-width="2"/>
 <circle cx="475" cy="525" r="22" fill="#b66a25"/><text x="475" y="533" text-anchor="middle" class="num">5</text>
-<text x="515" y="536" class="cardTitle">Deterministic controls</text>
-<rect x="465" y="568" width="170" height="38" rx="19" fill="#f8dfc2"/><text x="550" y="594" text-anchor="middle" class="tag">GOVERNANCE</text>
-<text x="465" y="647" class="body">Enforce rules and</text><text x="465" y="678" class="body">invariants in software.</text>
+<text x="515" y="522" class="cardTitle">Deterministic</text><text x="515" y="554" class="cardTitle">controls</text>
+<rect x="465" y="585" width="170" height="38" rx="19" fill="#f8dfc2"/><text x="550" y="611" text-anchor="middle" class="tag">GOVERNANCE</text>
+<text x="465" y="660" class="body">Enforce rules and</text><text x="465" y="691" class="body">invariants in software.</text>
 
 <!-- 6 -->
 <rect x="810" y="485" width="330" height="235" rx="24" fill="#e6f5e9" stroke="#bdddc7" stroke-width="2"/>
 <circle cx="850" cy="525" r="22" fill="#2f8053"/><text x="850" y="533" text-anchor="middle" class="num">6</text>
-<text x="890" y="536" class="cardTitle">Evidence-backed answer</text>
-<rect x="840" y="568" width="120" height="38" rx="19" fill="#d1ead7"/><text x="900" y="594" text-anchor="middle" class="tag">TRUST</text>
-<text x="840" y="647" class="body">Produce a result that</text><text x="840" y="678" class="body">can be reconstructed.</text>
+<text x="890" y="522" class="cardTitle">Evidence-backed</text><text x="890" y="554" class="cardTitle">answer</text>
+<rect x="840" y="585" width="120" height="38" rx="19" fill="#d1ead7"/><text x="900" y="611" text-anchor="middle" class="tag">TRUST</text>
+<text x="840" y="660" class="body">Produce a result that</text><text x="840" y="691" class="body">can be reconstructed.</text>
 
 <path d="M390 602 H423" stroke="#70808d" stroke-width="4"/><path d="M414 591 L425 602 L414 613" fill="none" stroke="#70808d" stroke-width="4"/>
 <path d="M765 602 H798" stroke="#70808d" stroke-width="4"/><path d="M789 591 L800 602 L789 613" fill="none" stroke="#70808d" stroke-width="4"/>
