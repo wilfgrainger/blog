@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#f7f7f4"/>
+<style>
+  .title{font:700 48px Inter,Arial,sans-serif;fill:#102033}
+  .h{font:700 30px Inter,Arial,sans-serif;fill:#102033}
+  .b{font:400 23px Inter,Arial,sans-serif;fill:#2b3b4c}
+  .s{font:600 19px Inter,Arial,sans-serif;fill:#415160}
+  .tiny{font:500 16px Inter,Arial,sans-serif;fill:#53616d}
+</style>
+<text x="55" y="78" class="title">Same problem, different domain</text>
+<text x="55" y="118" class="b">The nouns change. The semantic problem does not.</text>
+<rect x="55" y="165" width="480" height="390" rx="20" fill="#e6eff9"/>
+<rect x="665" y="165" width="480" height="390" rx="20" fill="#fff0df"/>
+<text x="95" y="225" class="h">⚽ Football</text>
+<text x="705" y="225" class="h">Finance</text>
+<text x="95" y="285" class="b">Player</text><text x="705" y="285" class="b">Issuer</text><path d="M430 277 L660 277" stroke="#7e8c95" stroke-width="2"/><path d="M635 265 L660 277 L635 289" fill="none" stroke="#7e8c95" stroke-width="2"/><text x="95" y="343" class="b">Club</text><text x="705" y="343" class="b">Legal entity</text><path d="M430 335 L660 335" stroke="#7e8c95" stroke-width="2"/><path d="M635 323 L660 335 L635 347" fill="none" stroke="#7e8c95" stroke-width="2"/><text x="95" y="401" class="b">Registration</text><text x="705" y="401" class="b">Ownership relationship</text><path d="M430 393 L660 393" stroke="#7e8c95" stroke-width="2"/><path d="M635 381 L660 393 L635 405" fill="none" stroke="#7e8c95" stroke-width="2"/><text x="95" y="459" class="b">Appearance</text><text x="705" y="459" class="b">Transaction / event</text><path d="M430 451 L660 451" stroke="#7e8c95" stroke-width="2"/><path d="M635 439 L660 451 L635 463" fill="none" stroke="#7e8c95" stroke-width="2"/><text x="95" y="517" class="b">xG</text><text x="705" y="517" class="b">Risk or valuation metric</text><path d="M430 509 L660 509" stroke="#7e8c95" stroke-width="2"/><path d="M635 497 L660 509 L635 521" fill="none" stroke="#7e8c95" stroke-width="2"/>
+<text x="55" y="620" class="b">Different domains. Same challenge: shared meaning before consequential action.</text>
+</svg>
