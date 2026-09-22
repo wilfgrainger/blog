@@ -2,7 +2,7 @@
 
 *What football recruitment can teach us about building AI agents that know what their data actually means.*
 
-![Editorial illustration: an AI recruitment room evaluating Roberto McBaggio](images/01-hero.svg)
+![Editorial illustration: an AI recruitment room evaluating Roberto McBaggio](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/01-hero.svg)
 
 There are easier ways to explain AI agents than football.
 
@@ -129,7 +129,7 @@ A Pydantic model, relational schema and a few ruthless checks may solve an entir
 
 > Markdown → structured schemas → typed contracts → validated joins → shared semantics → graph where relationships genuinely justify one
 
-![From information to meaning: RAG, tools, schemas, semantic layer, deterministic controls, evidence-backed answer](images/03-semantic-stack.svg)
+![From information to meaning: RAG, tools, schemas, semantic layer, deterministic controls, evidence-backed answer](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/03-semantic-stack.svg)
 
 Most teams should climb only as high as the problem requires. The practical trigger is this: **you probably do not need an ontology because you have an LLM. You start needing one when the same consequential concepts are interpreted repeatedly across multiple datasets, systems, teams or agents — and different interpretations produce different decisions.**
 
@@ -157,7 +157,7 @@ We need to know whether the shortlist actually did.
 
 ## Five green ticks. Wrong striker.
 
-![Five green ticks ending in the wrong striker](images/02-five-green-ticks.svg)
+![Five green ticks ending in the wrong striker](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/02-five-green-ticks.svg)
 
 Here is the annoying part.
 
@@ -281,7 +281,7 @@ The ontology has not made the model smarter.
 
 It has removed a red herring.
 
-![Roberto McBaggio before and after semantic and deterministic checks](images/04-mcbaggio-before-after.svg)
+![Roberto McBaggio before and after semantic and deterministic checks](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/04-mcbaggio-before-after.svg)
 
 ---
 
@@ -349,7 +349,7 @@ Those are different kinds of uncertainty: one belongs to judgement; the other is
 
 ---
 
-![The ambiguity budget: different decisions tolerate different levels of uncertainty](images/06-ambiguity-budget.svg)
+![The ambiguity budget: different decisions tolerate different levels of uncertainty](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/06-ambiguity-budget.svg)
 
 ## And every agent sits somewhere on an authority gradient
 
@@ -411,7 +411,7 @@ Only the nouns have changed.
 
 ## Finance has the same semantic problem
 
-![Football concepts mapped to analogous financial concepts](images/05-football-to-finance.svg)
+![Football concepts mapped to analogous financial concepts](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/05-football-to-finance.svg)
 
 Replace **Player** with **Issuer**, **Club** with **Legal Entity**, **Registration** with **Ownership Relationship**, **xG Model** with **Valuation Methodology**, and **Recruitment Rule** with **Trading Mandate**. Then ask the same questions: which entity, according to which source, effective when, through which relationship, was it superseded, can the answer be reconstructed, and what happens when authoritative sources disagree?
 
