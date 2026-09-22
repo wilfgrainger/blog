@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#f7f7f4"/>
+<style>
+  .title{font:700 48px Inter,Arial,sans-serif;fill:#102033}
+  .h{font:700 30px Inter,Arial,sans-serif;fill:#102033}
+  .b{font:400 23px Inter,Arial,sans-serif;fill:#2b3b4c}
+  .s{font:600 19px Inter,Arial,sans-serif;fill:#415160}
+  .tiny{font:500 16px Inter,Arial,sans-serif;fill:#53616d}
+</style>
+<text x="55" y="78" class="title">The ambiguity budget</text>
+<text x="55" y="118" class="b">Different decisions tolerate different levels of uncertainty.</text>
+<line x1="115" y1="560" x2="1100" y2="560" stroke="#223744" stroke-width="3"/>
+<line x1="115" y1="560" x2="115" y2="170" stroke="#223744" stroke-width="3"/>
+<text x="590" y="625" text-anchor="middle" class="s">Tolerance for ambiguity →</text>
+<text x="40" y="360" transform="rotate(-90 40 360)" text-anchor="middle" class="s">Need for correctness &amp; auditability →</text>
+<path d="M115 190 L1100 500 L1100 560 L115 560 Z" fill="#e8f0f5"/>
+<path d="M115 190 L1100 500" stroke="#8eb7c6" stroke-width="4"/>
+<circle cx="205" cy="230" r="10" fill="#186f8d"/><text x="223" y="237" class="tiny">Trading</text><circle cx="270" cy="285" r="10" fill="#186f8d"/><text x="288" y="292" class="tiny">Regulatory reporting</text><circle cx="360" cy="335" r="10" fill="#186f8d"/><text x="378" y="342" class="tiny">Risk decisions</text><circle cx="500" cy="400" r="10" fill="#186f8d"/><text x="518" y="407" class="tiny">Credit decisions</text><circle cx="650" cy="455" r="10" fill="#186f8d"/><text x="668" y="462" class="tiny">Portfolio analytics</text><circle cx="825" cy="500" r="10" fill="#186f8d"/><text x="843" y="507" class="tiny">Talent scouting</text><circle cx="970" cy="530" r="10" fill="#186f8d"/><text x="988" y="537" class="tiny">Content generation</text>
+<text x="780" y="205" class="b">More authority → smaller ambiguity budget</text>
+</svg>
