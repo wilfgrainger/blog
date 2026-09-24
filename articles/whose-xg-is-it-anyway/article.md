@@ -1,6 +1,6 @@
 # Whose xG Is It Anyway?
 
-*What football recruitment can teach us about building AI agents that know what their data actually means.*
+*An AI finds the perfect striker. Every tool returns green. The answer is still wrong. A football story about the point where retrieval stops being enough.*
 
 ![Whose xG Is It Anyway? — editorial cover](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/01-hero.svg)
 
@@ -38,9 +38,7 @@ There is another problem. The shortlist mixes xG from two providers. Both column
 
 So we have two failures. **The penalties make McBaggio a false positive. The provider mismatch means parts of the shortlist should never have been ranked together at all.**
 
-Every row is real. The arithmetic is correct. Every tool returned green.
-
-The shortlist is wrong.
+> **Every row is real. The arithmetic is correct. Every tool returned green. The shortlist is wrong.**
 
 That is the interesting failure mode. The model did not hallucinate a striker. It composed individually plausible facts into an invalid decision.
 
@@ -145,7 +143,7 @@ Before the club formalises an ontology, one already exists. It lives in people, 
 
 > “Oh yeah. Don't use that column.”
 
-Organisations do not usually lack meaning. They lack **explicit, shared, machine-checkable meaning**.
+> **Organisations do not usually lack meaning. They lack explicit, shared, machine-checkable meaning.**
 
 The agent is now crossing joins Mark used to cross in his head: which player, competition, shots, provider, model version, minutes and current contract; what happens when two authoritative sources disagree; which relationships are valid *now*.
 
@@ -241,7 +239,7 @@ Anthropic's May 2026 work on agent containment makes the security version of the
 
 My rule of thumb is simple:
 
-**The more authority an agent has, the smaller its ambiguity budget should become.**
+> **The more authority an agent has, the smaller its ambiguity budget should become.**
 
 That is when semantics stops being documentation and becomes part of the control system.
 
