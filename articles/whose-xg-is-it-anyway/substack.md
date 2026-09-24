@@ -6,13 +6,32 @@ At 10:06, the club's new AI recruitment assistant finds its next number nine.
 
 The brief is simple:
 
-> Find under-23 forwards in Europe with at least 900 league minutes and more than 0.55 non-penalty expected goals per 90. Exclude players who would obviously be outside our budget.
+> Use the full 2025/26 domestic league season. Find under-23 centre-forwards in Europe with at least 2,000 league minutes and more than 0.55 non-penalty expected goals per 90. Exclude players who would obviously be outside our budget.
 
 Thirty seconds later, Roberto McBaggio appears.
 
-Twenty-one years old. Central Europe. Eighteen months left on his contract. He presses, runs the channels, and the assistant has even found six clips of him arriving between the centre-back and full-back.
+Twenty-one years old. Central Europe. Eighteen months left on his contract. He presses, runs the channels, and the assistant has clips for every goal, every shot and every high turnover from the season.
 
-And then there is the number: **0.64 xG per 90.**
+The dossier is not thin. It is almost offensively complete.
+
+- **34 league appearances, 30 starts, 2,684 minutes**
+- **17 goals, 5 assists**
+- **19.08 xG — 0.64 xG/90**
+- **5.84 xA — 0.20 xA/90**
+- **92 shots — 3.08/90**
+- **39 shots on target — 42.4%**
+- **178 touches in the opposition box — 5.97/90**
+- **31 key passes — 1.04/90**
+- **73 progressive carries — 2.45/90**
+- **486 pressures — 16.30/90**
+- **172 final-third pressures — 5.77/90**
+- **94 recoveries — 3.15/90**
+- **38 of 91 aerial duels won — 41.8%**
+- **49 of 96 take-ons completed — 51.0%**
+
+There is enough here to build a radar, a role profile, a shot map, a similarity model and a very persuasive PowerPoint deck.
+
+And then there is the headline number: **0.64 xG per 90.**
 
 For approximately nine glorious minutes, recruitment has been solved.
 
@@ -26,7 +45,15 @@ Nobody answers.
 
 It did not.
 
-In our fictional dataset, McBaggio's 0.64 came from 7.27 xG over 1,020 minutes. Three penalties contributed 2.37. Remove them and the calculation becomes `(7.27 - 2.37) / 1,020 × 90 = 0.43` non-penalty xG per 90.
+The season total contains **four penalties**. At 0.79 xG each, they contribute 3.16 of McBaggio's 19.08 xG. Remove them and the arithmetic becomes:
+
+> `(19.08 - 3.16) / 2,684 × 90 = 0.53` non-penalty xG per 90.
+
+The full-season view actually makes the mistake more interesting. This is not a small-sample problem. McBaggio has 2,684 league minutes, 92 shots and an entire season of event data.
+
+The system has plenty of evidence.
+
+It has attached the wrong meaning to part of it.
 
 He no longer meets the brief.
 
@@ -115,7 +142,7 @@ Expected goals is not like date of birth. It is a **model output**.
 
 A July 2026 paper in *Intelligent Sports and Health* describes xG as a probabilistic estimate built from features such as shot location, angle, body part and match context, and warns against treating it as a deterministic account of what “should” have happened. Model design and context affect interpretation. [Lago-Peñas et al., *A probabilistic and dynamic reformulation of expected goals (xG): Methodological advances and modelling perspectives*, July 2026](https://doi.org/10.1016/j.ish.2026.05.001).
 
-A cell containing `0.64` is therefore not enough. To use it safely, the system may need to know the metric definition, provider, model version, competition scope, time period, penalty treatment, minutes definition and aggregation rule.
+A season line containing `19.08 xG`, `0.64 xG/90`, 92 shots and 2,684 minutes is therefore still not enough. To use those numbers safely, the system may need to know the metric definition, provider, model version, competition scope, time period, penalty treatment, minutes definition and aggregation rule.
 
 The database contains a number. **The semantic layer tells us what kind of number it is.**
 
@@ -169,7 +196,7 @@ Now rerun the search.
 
 “Non-penalty xG” resolves to an approved definition. The calculation service removes penalties. Provider and model-version compatibility is checked before ranking. “League” resolves to the competitions the club actually means.
 
-McBaggio's 0.64 becomes **0.43 non-penalty xG/90**. He drops below the 0.55 threshold.
+McBaggio's 19.08 total xG becomes **15.92 non-penalty xG**. Across 2,684 minutes, his headline 0.64 xG/90 becomes **0.53 non-penalty xG/90**. He drops below the 0.55 threshold.
 
 The provider problem is handled separately. If only some candidates lack comparable evidence, withhold those candidates and rank the valid remainder. If the comparability problem undermines the cohort, refuse the ranking and explain what is missing.
 
@@ -215,7 +242,7 @@ There is still plenty we do **not** want to formalise away.
 
 Whether McBaggio will adapt to another league is judgement. Whether his movement against a low block compensates for weaker numbers is judgement. A scout is supposed to form hypotheses.
 
-The club can tolerate uncertainty about whether he will improve next season. It should not tolerate uncertainty about whether a metric labelled “non-penalty” still contains three penalties.
+The club can tolerate uncertainty about whether he will improve next season. It should not tolerate uncertainty about whether a metric labelled “non-penalty” still contains four penalties.
 
 That is the **ambiguity budget**: how much unresolved interpretation a workflow can tolerate before it needs more evidence, a human or a stop.
 
