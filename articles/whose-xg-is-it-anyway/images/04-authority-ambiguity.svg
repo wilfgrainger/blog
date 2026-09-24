@@ -1,19 +1,74 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
-<rect width="1200" height="675" fill="#0f1c27"/>
-<text x="62" y="80" fill="#f8f2e7" font-family="Georgia,serif" font-size="50" font-weight="700">Authority up. Ambiguity down.</text>
-<text x="64" y="118" fill="#a9bcc8" font-family="Arial,Helvetica,sans-serif" font-size="21">The same model can sit inside very different risk envelopes.</text>
+<rect width="1200" height="675" fill="#081a26"/>
+<text x="58" y="86" fill="#fbf3e6" font-family="Georgia,serif" font-size="58" font-weight="700">Authority up. Ambiguity down.</text>
+<text x="60" y="123" fill="#b8c8d1" font-family="Arial,Helvetica,sans-serif" font-size="22">The same model can sit inside very different risk envelopes.</text>
 
 <g font-family="Arial,Helvetica,sans-serif">
-  <g><rect x="64" y="176" width="196" height="350" rx="22" fill="#173340"/><text x="162" y="220" text-anchor="middle" fill="#f8f2e7" font-size="20" font-weight="900">EXPLAIN</text><text x="162" y="255" text-anchor="middle" fill="#8dd1b6" font-size="15" font-weight="800">HIGHER AMBIGUITY OK</text><circle cx="162" cy="336" r="48" fill="#285467"/><text x="162" y="328" text-anchor="middle" fill="#f8f2e7" font-size="28" font-weight="900">?</text><text x="162" y="356" text-anchor="middle" fill="#d3e4e8" font-size="14">What is xG?</text><text x="162" y="445" text-anchor="middle" fill="#d3e4e8" font-size="15">Retrieve context</text><text x="162" y="470" text-anchor="middle" fill="#d3e4e8" font-size="15">show sources</text></g>
-  <g><rect x="276" y="176" width="196" height="350" rx="22" fill="#1a3b45"/><text x="374" y="220" text-anchor="middle" fill="#f8f2e7" font-size="20" font-weight="900">RECOMMEND</text><text x="374" y="255" text-anchor="middle" fill="#8dd1b6" font-size="15" font-weight="800">EVIDENCE REQUIRED</text><circle cx="374" cy="336" r="48" fill="#2f625f"/><text x="374" y="328" text-anchor="middle" fill="#f8f2e7" font-size="28" font-weight="900">3</text><text x="374" y="356" text-anchor="middle" fill="#d3e4e8" font-size="14">watchlist</text><text x="374" y="445" text-anchor="middle" fill="#d3e4e8" font-size="15">Comparable data</text><text x="374" y="470" text-anchor="middle" fill="#d3e4e8" font-size="15">reconstructable answer</text></g>
-  <g><rect x="488" y="176" width="196" height="350" rx="22" fill="#214744"/><text x="586" y="220" text-anchor="middle" fill="#f8f2e7" font-size="20" font-weight="900">DECIDE</text><text x="586" y="255" text-anchor="middle" fill="#f0c957" font-size="15" font-weight="800">SMALLER BUDGET</text><circle cx="586" cy="336" r="48" fill="#536b4d"/><path d="M566 332 l13 14 27-34" fill="none" stroke="#f8f2e7" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><text x="586" y="356" text-anchor="middle" fill="#e5eadf" font-size="14">final shortlist</text><text x="586" y="445" text-anchor="middle" fill="#e5eadf" font-size="15">Deterministic</text><text x="586" y="470" text-anchor="middle" fill="#e5eadf" font-size="15">validation</text></g>
-  <g><rect x="700" y="176" width="196" height="350" rx="22" fill="#4d4436"/><text x="798" y="220" text-anchor="middle" fill="#f8f2e7" font-size="20" font-weight="900">ACT</text><text x="798" y="255" text-anchor="middle" fill="#f0c957" font-size="15" font-weight="800">HUMAN GATE</text><circle cx="798" cy="336" r="48" fill="#6b5940"/><text x="798" y="326" text-anchor="middle" fill="#f8f2e7" font-size="24" font-weight="900">CALL</text><text x="798" y="356" text-anchor="middle" fill="#efe6d7" font-size="14">agent</text><text x="798" y="445" text-anchor="middle" fill="#efe6d7" font-size="15">Permission +</text><text x="798" y="470" text-anchor="middle" fill="#efe6d7" font-size="15">approval</text></g>
-  <g><rect x="912" y="176" width="224" height="350" rx="22" fill="#533032"/><text x="1024" y="220" text-anchor="middle" fill="#f8f2e7" font-size="20" font-weight="900">COMMIT</text><text x="1024" y="255" text-anchor="middle" fill="#ff8b82" font-size="15" font-weight="800">TINY AMBIGUITY BUDGET</text><circle cx="1024" cy="336" r="48" fill="#7a3c3f"/><text x="1024" y="326" text-anchor="middle" fill="#fff" font-size="22" font-weight="900">£25m</text><text x="1024" y="356" text-anchor="middle" fill="#f5dddd" font-size="14">offer</text><text x="1024" y="445" text-anchor="middle" fill="#f5dddd" font-size="15">Hard boundary</text><text x="1024" y="470" text-anchor="middle" fill="#f5dddd" font-size="15">+ explicit authority</text></g>
+  <!-- Explain -->
+  <rect x="38" y="170" width="210" height="356" rx="18" fill="#0b3042" stroke="#2ca9d6" stroke-width="1.5"/>
+  <text x="143" y="216" text-anchor="middle" fill="#fbf3e6" font-size="22" font-weight="900">EXPLAIN</text>
+  <line x1="64" y1="236" x2="222" y2="236" stroke="#3d7893"/>
+  <text x="143" y="267" text-anchor="middle" fill="#70d8f0" font-size="14" font-weight="900">HIGHER AMBIGUITY OK</text>
+  <circle cx="143" cy="345" r="55" fill="#164f69" stroke="#2ca9d6"/>
+  <text x="143" y="344" text-anchor="middle" fill="#fbf3e6" font-size="42" font-weight="900">?</text>
+  <text x="143" y="376" text-anchor="middle" fill="#e0e9ed" font-size="14">What is xG?</text>
+  <line x1="64" y1="421" x2="222" y2="421" stroke="#3d7893"/>
+  <text x="143" y="457" text-anchor="middle" fill="#e0e9ed" font-size="14">Retrieve context</text>
+  <text x="143" y="480" text-anchor="middle" fill="#e0e9ed" font-size="14">show sources</text>
+
+  <!-- Recommend -->
+  <rect x="260" y="170" width="210" height="356" rx="18" fill="#0a3a3e" stroke="#31cbb4" stroke-width="1.5"/>
+  <text x="365" y="216" text-anchor="middle" fill="#fbf3e6" font-size="21" font-weight="900">RECOMMEND</text>
+  <line x1="286" y1="236" x2="444" y2="236" stroke="#3c8078"/>
+  <text x="365" y="267" text-anchor="middle" fill="#60dfc8" font-size="14" font-weight="900">EVIDENCE REQUIRED</text>
+  <circle cx="365" cy="345" r="55" fill="#1b5d57" stroke="#31cbb4"/>
+  <text x="365" y="344" text-anchor="middle" fill="#fbf3e6" font-size="36" font-weight="900">3</text>
+  <text x="365" y="376" text-anchor="middle" fill="#e0e9ed" font-size="14">watchlist</text>
+  <line x1="286" y1="421" x2="444" y2="421" stroke="#3c8078"/>
+  <text x="365" y="457" text-anchor="middle" fill="#e0e9ed" font-size="14">Comparable data</text>
+  <text x="365" y="480" text-anchor="middle" fill="#e0e9ed" font-size="14">reconstructable answer</text>
+
+  <!-- Decide -->
+  <rect x="482" y="170" width="210" height="356" rx="18" fill="#193f39" stroke="#d7c93b" stroke-width="1.5"/>
+  <text x="587" y="216" text-anchor="middle" fill="#fbf3e6" font-size="22" font-weight="900">DECIDE</text>
+  <line x1="508" y1="236" x2="666" y2="236" stroke="#71824e"/>
+  <text x="587" y="267" text-anchor="middle" fill="#f2d54c" font-size="14" font-weight="900">SMALLER BUDGET</text>
+  <circle cx="587" cy="345" r="55" fill="#526348" stroke="#d7c93b"/>
+  <path d="M563 344 l16 17 31-38" fill="none" stroke="#fbf3e6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="587" y="376" text-anchor="middle" fill="#e0e9ed" font-size="14">final shortlist</text>
+  <line x1="508" y1="421" x2="666" y2="421" stroke="#71824e"/>
+  <text x="587" y="457" text-anchor="middle" fill="#e0e9ed" font-size="14">Deterministic</text>
+  <text x="587" y="480" text-anchor="middle" fill="#e0e9ed" font-size="14">validation</text>
+
+  <!-- Act -->
+  <rect x="704" y="170" width="210" height="356" rx="18" fill="#3e3528" stroke="#d88722" stroke-width="1.5"/>
+  <text x="809" y="216" text-anchor="middle" fill="#fbf3e6" font-size="22" font-weight="900">ACT</text>
+  <line x1="730" y1="236" x2="888" y2="236" stroke="#7d6338"/>
+  <text x="809" y="267" text-anchor="middle" fill="#f0bd42" font-size="14" font-weight="900">HUMAN GATE</text>
+  <circle cx="809" cy="345" r="55" fill="#675237" stroke="#d88722"/>
+  <text x="809" y="346" text-anchor="middle" fill="#fbf3e6" font-size="28" font-weight="900">CALL</text>
+  <text x="809" y="376" text-anchor="middle" fill="#e0e9ed" font-size="14">agent</text>
+  <line x1="730" y1="421" x2="888" y2="421" stroke="#7d6338"/>
+  <text x="809" y="457" text-anchor="middle" fill="#e0e9ed" font-size="14">Permission +</text>
+  <text x="809" y="480" text-anchor="middle" fill="#e0e9ed" font-size="14">approval</text>
+
+  <!-- Commit -->
+  <rect x="926" y="170" width="236" height="356" rx="18" fill="#48262b" stroke="#ef4f5b" stroke-width="1.5"/>
+  <text x="1044" y="216" text-anchor="middle" fill="#fbf3e6" font-size="22" font-weight="900">COMMIT</text>
+  <line x1="952" y1="236" x2="1136" y2="236" stroke="#8c4249"/>
+  <text x="1044" y="267" text-anchor="middle" fill="#ff757b" font-size="14" font-weight="900">TINY AMBIGUITY BUDGET</text>
+  <circle cx="1044" cy="345" r="55" fill="#75343d" stroke="#ef4f5b"/>
+  <text x="1044" y="346" text-anchor="middle" fill="#fbf3e6" font-size="27" font-weight="900">£25m</text>
+  <text x="1044" y="376" text-anchor="middle" fill="#e0e9ed" font-size="14">offer</text>
+  <line x1="952" y1="421" x2="1136" y2="421" stroke="#8c4249"/>
+  <text x="1044" y="457" text-anchor="middle" fill="#e0e9ed" font-size="14">Hard boundary</text>
+  <text x="1044" y="480" text-anchor="middle" fill="#e0e9ed" font-size="14">+ explicit authority</text>
 </g>
 
-<path d="M90 568 L1104 568" stroke="#334754" stroke-width="2"/>
-<path d="M98 555 C340 565 560 579 760 596 S990 615 1112 625" fill="none" stroke="#f0c957" stroke-width="6" stroke-linecap="round"/>
-<circle cx="98" cy="555" r="8" fill="#8dd1b6"/><circle cx="1112" cy="625" r="8" fill="#ff736c"/>
-<text x="96" y="646" fill="#8dd1b6" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="900">MORE INTERPRETATION</text>
-<text x="1114" y="646" text-anchor="end" fill="#ff8b82" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="900">MORE PROOF + CONTROL</text>
+<line x1="60" y1="568" x2="1140" y2="568" stroke="#354b58" stroke-width="2"/>
+<path d="M68 557 C315 564 560 579 770 594 S1030 612 1132 620" fill="none" stroke="#f2c94c" stroke-width="6" stroke-linecap="round"/>
+<circle cx="68" cy="557" r="9" fill="#62dfc6"/>
+<circle cx="1132" cy="620" r="9" fill="#ff6468"/>
+<text x="60" y="650" fill="#62dfc6" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="900">MORE INTERPRETATION</text>
+<text x="1140" y="650" text-anchor="end" fill="#ff6468" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="900">MORE PROOF + CONTROL</text>
 </svg>
