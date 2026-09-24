@@ -1,8 +1,8 @@
 I gave an AI recruitment agent a simple job:
 
-Find an under-23 striker with more than 0.55 non-penalty xG per 90.
+Use the full season. Find an under-23 striker with more than 2,000 league minutes and 0.55 non-penalty xG per 90.
 
-It found Roberto McBaggio at 0.64.
+It found Roberto McBaggio at 0.64 — after 34 league appearances, 2,684 minutes, 17 goals and 92 shots.
 
 Every tool call succeeded.
 Every row was real.
@@ -10,7 +10,7 @@ The maths was right.
 
 He was still the wrong answer.
 
-Three penalties had not been removed. And parts of the shortlist used xG from different providers as though the numbers meant exactly the same thing.
+Four penalties had not been removed. And parts of the shortlist used xG from different providers as though the numbers meant exactly the same thing.
 
 That is the agent failure mode I think we talk about too little.
 
