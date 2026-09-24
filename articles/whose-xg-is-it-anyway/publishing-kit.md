@@ -4,10 +4,10 @@
 Whose xG Is It Anyway?
 
 ## Subtitle
-An AI finds the perfect striker. Every tool returns green. The answer is still wrong. A football story about the point where retrieval stops being enough.
+An AI analyses a full season and finds the perfect striker. Every tool returns green. The answer is still wrong. A football story about the point where retrieval stops being enough.
 
 ## Preview / social description
-Five green ticks. Wrong striker. What happens when an AI agent retrieves real data, calculates correctly, and still makes the wrong decision? The problem is not hallucination. It is meaning.
+Thirty-four appearances. 2,684 minutes. Ninety-two shots. Five green ticks. Wrong striker. What happens when an AI agent has a full season of real-looking data, calculates correctly, and still makes the wrong decision? The problem is not volume. It is meaning.
 
 ## Hero
 https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/01-hero.svg
