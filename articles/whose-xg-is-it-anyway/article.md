@@ -49,7 +49,11 @@ Nobody answers.
 
 It did not.
 
-The season total contains **four penalties**. At 0.79 xG each, they contribute 3.16 of McBaggio's 19.08 xG. Remove them and the arithmetic becomes:
+The season total contains **four penalties**. At 0.79 xG each, they contribute 3.16 of McBaggio's 19.08 xG.
+
+The penalties are not a data error. Provider A's `xG` field is doing exactly what it says on the tin: **total expected goals, penalties included**. The semantic mistake is treating `xG` and `non-penalty xG` as though they mean the same thing.
+
+Remove them and the arithmetic becomes:
 
 > `(19.08 - 3.16) / 2,684 × 90 = 0.53` non-penalty xG per 90.
 
