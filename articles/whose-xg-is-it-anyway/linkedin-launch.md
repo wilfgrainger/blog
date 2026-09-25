@@ -1,33 +1,17 @@
-I gave an AI recruitment agent a simple job:
+McBaggio looks like a decent find for a recruitment agent.
 
-Use the full season. Find an under-23 striker with more than 2,000 league minutes and 0.55 non-penalty xG per 90.
+34 league appearances. 2,684 minutes. 17 goals. 92 shots. The screen says 0.64 xG per 90 and puts him at the top of the list.
 
-It found Roberto McBaggio at 0.64 — after 34 league appearances, 2,684 minutes, 17 goals and 92 shots.
+Then Mark asks whether it removed the penalties.
 
-Every tool call succeeded.
-Every row was real.
-The maths was right.
+It hasn't. Four spot kicks bring his total xG to 19.08. For the non-penalty rate the club actually asked for, he lands at 0.53 — below the 0.55 cut-off.
 
-He was still the wrong answer.
+I made the club and player up, but the mistake is one I would test for in a real agent: a valid source field, correct arithmetic and the wrong decision. The article follows that mistake through provider comparisons, shared definitions and a fictional trade limit where a stale ownership relationship causes a £9m exposure to pass an £8m check.
 
-Four penalties had not been removed. And parts of the shortlist used xG from different providers as though the numbers meant exactly the same thing.
+I end with a small local replay and an AgentCore deployment design: the screening call is allowed, McBaggio is excluded with the evidence attached, and an offer request is denied before the function runs. The replay is in the repo if you want to check the calculation and permission boundary yourself.
 
-That is the agent failure mode I think we talk about too little.
-
-RAG gets information into the room. Tools let a model query and act. Schemas give structure.
-
-But when the same business concept means different things across systems, retrieval alone does not solve the problem.
-
-At some point, semantics becomes part of the control system.
-
-I wrote this using football because it is more fun than starting with issuer hierarchies and trading mandates. But the architecture maps surprisingly well to financial services.
-
-The idea I keep coming back to:
-
-The more authority an agent has, the smaller its ambiguity budget should become.
+Mark can still scout the lad. He just gets the right number first.
 
 **Whose xG Is It Anyway?**
 
 [ARTICLE LINK]
-
-#AIAgents #DataArchitecture #FinancialServices
