@@ -8,7 +8,9 @@ It hasn't. Four spot kicks bring his total xG to 19.08. For the non-penalty rate
 
 I made the club and player up, but the mistake is one I would test for in a real agent: a valid source field, correct arithmetic and the wrong decision. The article follows that mistake through provider comparisons, shared definitions and a fictional trade limit where a stale ownership relationship causes a £9m exposure to pass an £8m check.
 
-The question that stuck with me: which parts should the agent be allowed to interpret, and which parts must the surrounding system check?
+I end with the screen I would actually ship: an agent on Bedrock AgentCore asks a versioned service for a shortlist. That service checks the metric and returns ranked, excluded or withheld with the evidence. AgentCore governs access to the tool; it doesn't decide what “non-penalty xG” means.
+
+Mark can still scout the lad. He just gets the right number first.
 
 **Whose xG Is It Anyway?**
 

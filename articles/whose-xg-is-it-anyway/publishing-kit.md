@@ -7,7 +7,7 @@ Whose xG Is It Anyway?
 How a full season of football data led an AI agent to the wrong shortlist — and why Mark spotted it in nine minutes.
 
 ## Preview / social description
-A fictional striker has 34 league appearances, 2,684 minutes, 17 goals and 92 shots. The recruitment agent finds him at 0.64 xG per 90. Mark asks about the four penalties, and the actual screening rate falls to 0.53. The arithmetic was fine. The number answered the wrong question.
+A fictional striker has 34 league appearances, 2,684 minutes, 17 goals and 92 shots. The recruitment agent finds him at 0.64 xG per 90. Mark asks about four penalties, and his non-penalty rate falls to 0.53. What would a working agent system actually do with that discovery? A concrete AgentCore-backed screen returns an evidence trail, a reason for exclusion and an honest refusal when candidates cannot be compared.
 
 ## Hero
 https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/01-hero.svg
@@ -26,6 +26,8 @@ The four images have distinct jobs. Keep their order and their exact full-season
 > The failure is often in the hand-off between one plausible step and the next.
 
 > A limit checker can enforce £8 million perfectly and still receive the wrong ownership relation.
+
+> Policy can say *who may call what*. It cannot know that McBaggio's 19.08 included four penalties.
 
 ## Suggested tags
 AI agents · Football analytics · Data architecture · Ontology · Financial services

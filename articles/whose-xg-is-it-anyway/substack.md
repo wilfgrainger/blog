@@ -38,6 +38,8 @@ There is another wrinkle in the shortlist. Some candidates' xG comes from Provid
 
 McBaggio might still be worth watching. He was a false positive **for this brief**, not a verdict on whether he can play.
 
+This is the problem I want the system to solve: keep the meaning of a number intact as it passes from a provider to a calculation to a decision. The agent can talk to Mark about a striker. It should also be able to show why that striker made, missed or could not yet be compared for this particular list.
+
 ## Five green ticks, one bad shortlist
 
 ![Five green checks for lookup, minutes, xG, ranking and writing a shortlist still put McBaggio wrongly in first place; the problem is how the evidence was combined.](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/02-five-green-ticks.svg)
@@ -114,15 +116,17 @@ Financial terms such as issuer, obligor, guarantor and parent carry relationship
 
 A limit checker can enforce £8 million perfectly and still receive the wrong ownership relation. It is McBaggio with a different noun in the middle of the calculation.
 
-## What I would build first
+## The part I would actually ship
 
-I'd start with one screen the recruitment team already understands. Write down the definition of each input and where it comes from. Make the candidate ID unambiguous. Put the non-penalty calculation and provider check in code; have the agent request a screen and explain its outcome. Keep enough evidence to reconstruct the decision.
+Give the recruitment team one approved screen, with a versioned definition and an unambiguous player ID. Put the penalty subtraction, eligible-minute selection, provider check and strict threshold in a small service called `screen_recruits`. The agent asks it for a screen; the service returns a result for each candidate: **ranked**, **excluded** or **withheld**, with the inputs, calculation, source, model and policy version that produced it. If no candidates have comparable evidence, there is no ranking. The agent explains those results to Mark; it cannot promote an excluded player by writing a nicer sentence.
 
-Then try the unpleasant records. A duplicate player. A penalty field missing from an otherwise excellent season. Minutes from one competition joined to xG from another. A provider switch. A value exactly equal to 0.55. A contract or ownership record valid yesterday but superseded today. Ask Mark which failures should exclude a candidate, which should withhold the comparison, and when a person can make an exception.
+If the club uses AWS, [Bedrock AgentCore Runtime](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html) could host the agent, and [AgentCore Gateway](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-core-concepts.html) could expose `screen_recruits` as a tool backed by that service. [AgentCore Identity](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/identity.html) identifies the calling workload; [AgentCore Policy](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/use-gateway-with-policy.html) can govern whether it may invoke that Gateway tool. An offer-submission tool would need a separate permission and approval path. Policy can say *who may call what*. It cannot know that McBaggio's 19.08 included four penalties. That check belongs inside `screen_recruits`, against the club's definition and the underlying evidence.
 
-Measure the bad acceptances as well as the refusals. If half the cohort is withheld, that might be an honest finding about poor coverage; it is not a usable recruitment product. If nobody is ever withheld, I'd look very closely at what the service assumes.
+The result for McBaggio would carry 19.08 total xG, 3.16 penalty xG, 15.92 non-penalty xG, 2,684 eligible minutes and **0.53: excluded**. A Provider B-only candidate would be **withheld**, with the missing comparison basis stated plainly. Mark could still add McBaggio to a scouting watchlist, recording that as his own choice. He should not have to falsify the screen to do it.
 
-I wouldn't commission an ontology on Monday. I'd wait until a second team has defined “league minutes” differently, a third has reused player IDs from another feed, and each service passes its own tests while disagreeing with the others. Then there is a real shared meaning problem to solve. The definition needs to survive the journey from the person who knows it to the software that uses it.
+I'd test the awkward records before trusting a demo: duplicate IDs, missing penalty events, minutes joined from another competition, a provider switch, exactly 0.55, and an ownership relationship effective today but recorded yesterday. Tests of the service should assert the exact number and status, including a whole cohort for which the answer is “no ranking”. [AgentCore Observability](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/observability.html) can trace tool calls, and [AgentCore Evaluations](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations.html) can help assess the agent's explanation. Neither replaces an assertion that this particular candidate was excluded for this particular reason. Keep the evidence and policy version with the tool result so someone can inspect the decision after the chat has ended.
+
+If half the cohort is withheld, that is a problem with data coverage to take back to the team. If nobody is ever withheld, inspect what the service assumes. I'd wait to formalise an ontology until different teams start passing local tests while disagreeing about “league minutes”, player identity or which ownership relationship was valid at decision time. By then there is a real shared meaning problem, and a working screen to show exactly where it hurts.
 
 ## Back to Monday
 
