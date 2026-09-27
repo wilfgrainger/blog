@@ -4,40 +4,34 @@
 Whose xG Is It Anyway?
 
 ## Subtitle
-The striker had a season's worth of evidence. The shortlist still answered the wrong question.
+Five green ticks. One player on the wrong shortlist.
 
 ## Preview / social description
-A fictional striker has 34 league appearances, 2,684 minutes, 17 goals and 92 shots. The recruitment agent finds him at 0.64 xG per 90. Mark asks about four penalties, and his non-penalty rate falls to 0.53. What would a working agent system actually do with that discovery? A concrete AgentCore-backed screen returns an evidence trail, a reason for exclusion and an honest refusal when candidates cannot be compared.
+A fictional striker looks like a find at 0.64 xG per 90. Mark asks whether the agent removed four penalties. It didn't, and the non-penalty rate is 0.53—below the club's 0.55 cut-off. The arithmetic worked. The feedback around the decision didn't. What would it take to build a screen that can show its evidence, admit when players cannot be compared, and stop before an unauthorised offer?
 
 ## Hero
 https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/01-hero.svg
 
 ## Image sequence
-1. Hero — immediately below the title/subtitle.
-2. Five green ticks — in “Five green ticks, one bad shortlist”.
-3. McBaggio calculation — immediately after the evidence path. The portrait layout is checked at 375 pixels wide; the full dossier stays in the text.
-4. Authority / ambiguity — immediately after the authority discussion.
-
-The four images have distinct jobs. Keep their order and their exact full-season statistics.
+1. Hero — below the title/subtitle.
+2. Five green ticks — after “Why everything looked green”.
+3. McBaggio calculation — after the excluded/withheld distinction.
+4. Authority / ambiguity — after “How much can the agent assume?”
 
 ## Pull quotes
-> A penalty belongs in total xG. It just doesn't belong in the metric the club asked for.
+> The agent hasn't made up a player or invented a number. That is what makes the mistake easy to miss.
 
-> The failure is often in the hand-off between one plausible step and the next.
+> A shared definition that nobody can challenge will become another green tick.
 
-> A limit checker can enforce £8 million perfectly and still receive the wrong ownership relation.
-
-> The first call is authorised and produces an exclusion. The last is stopped before the offer function runs.
+> The greater the authority to act, the less room there is to guess.
 
 ## Suggested tags
-AI agents · Football analytics · Data architecture · Ontology · Financial services
+AI agents · Football analytics · Systems thinking · Data architecture · Financial services
 
 ## Publish check
-- The club, players, season dossier and financial mandate are fictional; keep that clear in the article and promotion.
-- Paste `substack.md` as the body. Set title and subtitle in Substack's own fields.
-- Preserve the source links and complete alt text.
-- The image and replay links target `main`; merge the reviewed article changes before publishing those links. Preview revised assets from the PR branch during review.
-- Keep the local replay described as a local demonstration. It makes no AWS calls and does not establish that an AgentCore deployment has been tested.
-- Check that all four images load and read well on mobile; if SVG importing fails, export PNG versions rather than pasting screenshots.
-- Keep the first screen clean: title, subtitle, hero, then straight into 10:06.
-- Leave the holiday sentence as the last line. No generic conclusion or call to action.
+- The player, club, season dossier and investment mandate are fictional. Keep that clear in promotion.
+- Paste `substack.md` as the body, and set the title and subtitle in Substack's own fields.
+- Keep four images and their alt text. Check readability on mobile and export PNGs if Substack will not accept the SVGs.
+- The images and local replay links target `main`; merge the reviewed PR before publishing those links.
+- The local replay is a demonstration of the metric and permission boundary, not a live AgentCore deployment.
+- Leave the final watchlist decision and last sentence as the ending. No added call to action.
