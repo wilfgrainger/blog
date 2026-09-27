@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1600" viewBox="0 0 1080 1600" role="img" aria-labelledby="title desc">
+  <title id="title">A fresh retrieval. Yesterday’s ownership.</title>
+  <desc id="desc">In a fictional mandate, exposure is capped at £8 million per immediate legal parent. Yesterday, Issuer A and Issuer B had different parents. Today at 09:00, Issuer B’s parent changes from Parent Y to Parent X. An authoritative notice is available at 09:15. At 14:17 the agent uses yesterday’s snapshot, making £6 million in A and a proposed £3 million in B look like separate groups. The effective relationship puts both under Parent X, for £9 million, exceeding the £8 million cap. Amounts and currency are fixed: the ownership relationship alone changes the decision. Effective time, publication time and decision time are distinct.</desc>
+  <rect x="0" y="0" width="1080" height="1600" rx="0" fill="#F6F1E7"/>
+  <text x="60" y="60" font-family="Nimbus Sans, Arial, sans-serif" font-size="22" font-weight="700" fill="#52645D" text-anchor="start">WHOSE xG IS IT ANYWAY?</text>
+  <text x="1020" y="60" font-family="Nimbus Sans, Arial, sans-serif" font-size="22" font-weight="700" fill="#52645D" text-anchor="end">03 / THE STALE RELATIONSHIP</text>
+  <path d="M60 87 H1020" stroke="#CFCDBF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="178" font-family="Nimbus Roman, Georgia, serif" font-size="75" font-weight="700" fill="#172B2A" text-anchor="start">A fresh retrieval.</text>
+  <text x="60" y="261" font-family="Nimbus Roman, Georgia, serif" font-size="75" font-weight="700" fill="#172B2A" text-anchor="start">Yesterday’s ownership.</text>
+  <rect x="60" y="311" width="960" height="71" rx="0" fill="#164C3C"/>
+  <text x="540" y="357" font-family="Nimbus Sans, Arial, sans-serif" font-size="26" font-weight="700" fill="#FFFCF6" text-anchor="middle">FICTIONAL MANDATE: £8m PER IMMEDIATE LEGAL PARENT</text>
+  <path d="M115 484 H965" stroke="#52645D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="150" cy="484" r="12" fill="#164C3C"/>
+  <text x="150" y="446" font-family="Nimbus Sans, Arial, sans-serif" font-size="38" font-weight="700" fill="#164C3C" text-anchor="middle">09:00</text>
+  <text x="150" y="536" font-family="Nimbus Sans, Arial, sans-serif" font-size="29" font-weight="400" fill="#172B2A" text-anchor="middle">Change legally</text>
+  <text x="150" y="572" font-family="Nimbus Sans, Arial, sans-serif" font-size="29" font-weight="400" fill="#172B2A" text-anchor="middle">effective</text>
+  <circle cx="540" cy="484" r="12" fill="#3657BD"/>
+  <text x="540" y="446" font-family="Nimbus Sans, Arial, sans-serif" font-size="38" font-weight="700" fill="#3657BD" text-anchor="middle">09:15</text>
+  <text x="540" y="536" font-family="Nimbus Sans, Arial, sans-serif" font-size="29" font-weight="400" fill="#172B2A" text-anchor="middle">Authoritative</text>
+  <text x="540" y="572" font-family="Nimbus Sans, Arial, sans-serif" font-size="29" font-weight="400" fill="#172B2A" text-anchor="middle">notice available</text>
+  <circle cx="930" cy="484" r="12" fill="#B8402C"/>
+  <text x="930" y="446" font-family="Nimbus Sans, Arial, sans-serif" font-size="38" font-weight="700" fill="#B8402C" text-anchor="middle">14:17</text>
+  <text x="930" y="536" font-family="Nimbus Sans, Arial, sans-serif" font-size="29" font-weight="400" fill="#172B2A" text-anchor="middle">Agent checks</text>
+  <text x="930" y="572" font-family="Nimbus Sans, Arial, sans-serif" font-size="29" font-weight="400" fill="#172B2A" text-anchor="middle">the trade</text>
+  <rect x="60" y="633" width="460" height="601" rx="0" fill="#FFFCF6" stroke="#CFCDBF" stroke-width="2"/>
+  <rect x="560" y="633" width="460" height="601" rx="0" fill="#E3EBDD" stroke="#CFCDBF" stroke-width="2"/>
+  <text x="85" y="682" font-family="Nimbus Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#52645D" text-anchor="start">USING YESTERDAY’S</text>
+  <text x="85" y="713" font-family="Nimbus Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#52645D" text-anchor="start">SNAPSHOT</text>
+  <text x="585" y="682" font-family="Nimbus Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#164C3C" text-anchor="start">USING THE EFFECTIVE</text>
+  <text x="585" y="713" font-family="Nimbus Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#164C3C" text-anchor="start">RELATIONSHIP</text>
+  <rect x="86" y="765" width="191" height="70" rx="0" fill="#F6F1E7" stroke="#CFCDBF" stroke-width="2"/>
+  <rect x="303" y="765" width="191" height="70" rx="0" fill="#F6F1E7" stroke="#CFCDBF" stroke-width="2"/>
+  <text x="181.5" y="810" font-family="Nimbus Sans, Arial, sans-serif" font-size="32" font-weight="400" fill="#172B2A" text-anchor="middle">Parent X</text>
+  <text x="398.5" y="810" font-family="Nimbus Sans, Arial, sans-serif" font-size="32" font-weight="400" fill="#172B2A" text-anchor="middle">Parent Y</text>
+  <path d="M181.5 835 V899" stroke="#52645D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M172.5 887 L181.5 899 L190.5 887" stroke="#52645D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M398.5 835 V899" stroke="#52645D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M389.5 887 L398.5 899 L407.5 887" stroke="#52645D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="616" y="765" width="348" height="70" rx="0" fill="#164C3C"/>
+  <text x="790" y="810" font-family="Nimbus Sans, Arial, sans-serif" font-size="34" font-weight="700" fill="#FFFCF6" text-anchor="middle">Parent X</text>
+  <path d="M790 835 V866 M679 866 H898" stroke="#164C3C" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M679 866 V899" stroke="#164C3C" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M670 887 L679 899 L688 887" stroke="#164C3C" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M898 866 V899" stroke="#164C3C" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M889 887 L898 899 L907 887" stroke="#164C3C" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="91.5" y="903" width="180" height="134" rx="0" fill="#FFFCF6" stroke="#CFCDBF" stroke-width="2"/>
+  <text x="181.5" y="949" font-family="Nimbus Sans, Arial, sans-serif" font-size="30" font-weight="400" fill="#172B2A" text-anchor="middle">Issuer A</text>
+  <text x="181.5" y="1007" font-family="Nimbus Sans, Arial, sans-serif" font-size="48" font-weight="700" fill="#172B2A" text-anchor="middle">£6m</text>
+  <rect x="308.5" y="903" width="180" height="134" rx="0" fill="#FFFCF6" stroke="#CFCDBF" stroke-width="2"/>
+  <text x="398.5" y="949" font-family="Nimbus Sans, Arial, sans-serif" font-size="30" font-weight="400" fill="#172B2A" text-anchor="middle">Issuer B</text>
+  <text x="398.5" y="1007" font-family="Nimbus Sans, Arial, sans-serif" font-size="48" font-weight="700" fill="#172B2A" text-anchor="middle">£3m</text>
+  <rect x="589" y="903" width="180" height="134" rx="0" fill="#FFFCF6" stroke="#CFCDBF" stroke-width="2"/>
+  <text x="679" y="949" font-family="Nimbus Sans, Arial, sans-serif" font-size="30" font-weight="400" fill="#172B2A" text-anchor="middle">Issuer A</text>
+  <text x="679" y="1007" font-family="Nimbus Sans, Arial, sans-serif" font-size="48" font-weight="700" fill="#172B2A" text-anchor="middle">£6m</text>
+  <rect x="808" y="903" width="180" height="134" rx="0" fill="#FFFCF6" stroke="#CFCDBF" stroke-width="2"/>
+  <text x="898" y="949" font-family="Nimbus Sans, Arial, sans-serif" font-size="30" font-weight="400" fill="#172B2A" text-anchor="middle">Issuer B</text>
+  <text x="898" y="1007" font-family="Nimbus Sans, Arial, sans-serif" font-size="48" font-weight="700" fill="#172B2A" text-anchor="middle">£3m</text>
+  <text x="85" y="1100" font-family="Nimbus Sans, Arial, sans-serif" font-size="37" font-weight="700" fill="#172B2A" text-anchor="start">Separate groups:</text>
+  <text x="85" y="1146" font-family="Nimbus Sans, Arial, sans-serif" font-size="37" font-weight="700" fill="#172B2A" text-anchor="start">£6m and £3m</text>
+  <text x="85" y="1193" font-family="Nimbus Sans, Arial, sans-serif" font-size="27" font-weight="700" fill="#3657BD" text-anchor="start">APPARENT PASS</text>
+  <text x="585" y="1100" font-family="Nimbus Sans, Arial, sans-serif" font-size="37" font-weight="700" fill="#172B2A" text-anchor="start">One group:</text>
+  <text x="585" y="1146" font-family="Nimbus Sans, Arial, sans-serif" font-size="37" font-weight="700" fill="#172B2A" text-anchor="start">£6m + £3m = £9m</text>
+  <text x="585" y="1193" font-family="Nimbus Sans, Arial, sans-serif" font-size="26" font-weight="700" fill="#B8402C" text-anchor="start">£9m &gt; £8m: LIMIT EXCEEDED</text>
+  <text x="60" y="1330" font-family="Nimbus Roman, Georgia, serif" font-size="49" font-weight="700" fill="#172B2A" text-anchor="start">Same positions. Same prices.</text>
+  <text x="60" y="1388" font-family="Nimbus Roman, Georgia, serif" font-size="49" font-weight="700" fill="#172B2A" text-anchor="start">Only the relationship changed.</text>
+  <text x="60" y="1455" font-family="Nimbus Sans, Arial, sans-serif" font-size="35" font-weight="400" fill="#172B2A" text-anchor="start">Retrieving a record now does not make it current.</text>
+  <path d="M60 1510 H1020" stroke="#CFCDBF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="1553" font-family="Nimbus Sans, Arial, sans-serif" font-size="25" font-weight="400" fill="#52645D" text-anchor="start">Fictional GBP exposures and simplified grouping rule. Times are today.</text>
+</svg>

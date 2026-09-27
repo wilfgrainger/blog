@@ -1,0 +1,4 @@
+record_id,name,age,position,region,affordable,league_minutes,total_xg,penalty_xg,penalty_count,provider,model,season,competition_scope,denominator,penalty_treatment,metric_id
+fictional-001,Roberto McBaggio,21,forward,Europe,true,1020,7.27,2.37,3,Provider A,v3,2025-26,fictional_league,qualifying_league_minutes,subtract_reported_penalty_xg,xg_components_v1
+fictional-002,Elliot Ward,22,forward,Europe,true,1200,8.00,0.00,0,Provider A,v3,2025-26,fictional_league,qualifying_league_minutes,subtract_reported_penalty_xg,xg_components_v1
+fictional-003,Mateo Kovac,22,forward,Europe,true,900,6.20,0.00,0,Provider B,v1,2025-26,fictional_league,qualifying_league_minutes,subtract_reported_penalty_xg,xg_components_v1

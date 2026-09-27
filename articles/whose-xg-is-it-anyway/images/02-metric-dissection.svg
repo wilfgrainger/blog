@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1480" viewBox="0 0 1080 1480" role="img" aria-labelledby="title desc">
+  <title id="title">One player. Two different metrics.</title>
+  <desc id="desc">A shared horizontal axis decomposes McBaggio’s total xG per 90 into non-penalty and penalty contributions. 7.27 total xG over 1,020 minutes gives 0.64147 per 90; subtracting 2.37 penalty xG gives 0.43235 non-penalty xG per 90. The threshold of strictly more than 0.55 applies only to the non-penalty metric. He is excluded. Three penalties sum to 2.37 in this fictional fixture, an average of 0.79; this is not a universal penalty valuation. Bars use unrounded rates; labels are rounded.</desc>
+  <rect x="0" y="0" width="1080" height="1480" rx="0" fill="#F6F1E7"/>
+  <text x="60" y="60" font-family="Nimbus Sans, Arial, sans-serif" font-size="22" font-weight="700" fill="#52645D" text-anchor="start">WHOSE xG IS IT ANYWAY?</text>
+  <text x="1020" y="60" font-family="Nimbus Sans, Arial, sans-serif" font-size="22" font-weight="700" fill="#52645D" text-anchor="end">01 / THE MISSING SUBTRACTION</text>
+  <path d="M60 87 H1020" stroke="#CFCDBF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="178" font-family="Nimbus Roman, Georgia, serif" font-size="78" font-weight="700" fill="#172B2A" text-anchor="start">One player.</text>
+  <text x="60" y="261" font-family="Nimbus Roman, Georgia, serif" font-size="78" font-weight="700" fill="#172B2A" text-anchor="start">Two different metrics.</text>
+  <text x="60" y="317" font-family="Nimbus Sans, Arial, sans-serif" font-size="31" font-weight="400" fill="#52645D" text-anchor="start">Roberto McBaggio · Provider A / v3 · 1,020 minutes</text>
+  <text x="60" y="397" font-family="Nimbus Sans, Arial, sans-serif" font-size="27" font-weight="700" fill="#3657BD" text-anchor="start">THE ANSWER RETURNED</text>
+  <rect x="90" y="479" width="464.77941176470586" height="84" rx="0" fill="#164C3C"/>
+  <rect x="554.7794117647059" y="479" width="224.80147058823533" height="84" rx="0" fill="#B8402C"/>
+  <text x="90" y="451" font-family="Nimbus Sans, Arial, sans-serif" font-size="37" font-weight="400" fill="#172B2A" text-anchor="start">Total xG / 90</text>
+  <text x="804.5808823529412" y="541" font-family="Nimbus Sans, Arial, sans-serif" font-size="65" font-weight="700" fill="#3657BD" text-anchor="start">0.64</text>
+  <text x="60" y="648" font-family="Nimbus Sans, Arial, sans-serif" font-size="27" font-weight="700" fill="#164C3C" text-anchor="start">THE METRIC REQUESTED</text>
+  <text x="90" y="699" font-family="Nimbus Sans, Arial, sans-serif" font-size="37" font-weight="400" fill="#172B2A" text-anchor="start">Non-penalty xG / 90</text>
+  <rect x="90" y="727" width="464.77941176470586" height="84" rx="0" fill="#164C3C"/>
+  <rect x="554.7794117647059" y="727" width="224.80147058823533" height="84" rx="0" fill="none" stroke="#CFCDBF" stroke-width="2"/>
+  <text x="534.7794117647059" y="788" font-family="Nimbus Sans, Arial, sans-serif" font-size="65" font-weight="700" fill="#FFFCF6" text-anchor="end">0.43</text>
+  <path d="M681.25 425 V849" stroke="#B8402C" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 9"/>
+  <text x="695.25" y="620" font-family="Nimbus Sans, Arial, sans-serif" font-size="28" font-weight="700" fill="#B8402C" text-anchor="start">0.55 threshold</text>
+  <path d="M90 863 H950" stroke="#52645D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90.0 859 V871" stroke="#52645D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="90.0" y="905" font-family="Nimbus Sans, Arial, sans-serif" font-size="26" font-weight="400" fill="#52645D" text-anchor="middle">0.0</text>
+  <path d="M305.0 859 V871" stroke="#52645D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="305.0" y="905" font-family="Nimbus Sans, Arial, sans-serif" font-size="26" font-weight="400" fill="#52645D" text-anchor="middle">0.2</text>
+  <path d="M520.0 859 V871" stroke="#52645D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="520.0" y="905" font-family="Nimbus Sans, Arial, sans-serif" font-size="26" font-weight="400" fill="#52645D" text-anchor="middle">0.4</text>
+  <path d="M735.0 859 V871" stroke="#52645D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="735.0" y="905" font-family="Nimbus Sans, Arial, sans-serif" font-size="26" font-weight="400" fill="#52645D" text-anchor="middle">0.6</text>
+  <path d="M950.0 859 V871" stroke="#52645D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="950.0" y="905" font-family="Nimbus Sans, Arial, sans-serif" font-size="26" font-weight="400" fill="#52645D" text-anchor="middle">0.8</text>
+  <rect x="90" y="946" width="24" height="24" rx="0" fill="#164C3C"/>
+  <text x="128" y="968" font-family="Nimbus Sans, Arial, sans-serif" font-size="29" font-weight="400" fill="#172B2A" text-anchor="start">Non-penalty contribution</text>
+  <rect x="590" y="946" width="24" height="24" rx="0" fill="#B8402C"/>
+  <text x="628" y="968" font-family="Nimbus Sans, Arial, sans-serif" font-size="29" font-weight="400" fill="#172B2A" text-anchor="start">Penalty contribution</text>
+  <rect x="60" y="1020" width="960" height="230" rx="0" fill="#FFFCF6" stroke="#CFCDBF" stroke-width="2"/>
+  <text x="86" y="1067" font-family="Nimbus Sans, Arial, sans-serif" font-size="25" font-weight="700" fill="#52645D" text-anchor="start">THE EVIDENCE</text>
+  <text x="86" y="1125" font-family="Nimbus Sans, Arial, sans-serif" font-size="38" font-weight="700" fill="#172B2A" text-anchor="start">7.27 total xG − 2.37 xG from 3 penalties</text>
+  <text x="86" y="1182" font-family="Nimbus Sans, Arial, sans-serif" font-size="40" font-weight="700" fill="#172B2A" text-anchor="start">4.90 ÷ 1,020 minutes × 90 = 0.43</text>
+  <text x="60" y="1340" font-family="Nimbus Roman, Georgia, serif" font-size="47" font-weight="700" fill="#B8402C" text-anchor="start">0.43 &lt; 0.55. Exclude from this screen.</text>
+  <path d="M60 1394 H1020" stroke="#CFCDBF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="1437" font-family="Nimbus Sans, Arial, sans-serif" font-size="25" font-weight="400" fill="#52645D" text-anchor="start">Fictional data. Bars use unrounded rates; labels use two decimals.</text>
+</svg>

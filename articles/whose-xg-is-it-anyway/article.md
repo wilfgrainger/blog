@@ -1,423 +1,262 @@
 # Whose xG Is It Anyway?
 
-*An AI finds the perfect striker. The data is real, the maths is right, and the answer is still wrong.*
+*The AI found a striker. Every tool worked. The shortlist was still wrong.*
 
-![Whose xG Is It Anyway? — editorial cover](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/01-hero.svg)
+![A shortlisted footballer casts a red fish-shaped shadow across a tactics board, beside checkmarked scouting reports.](https://raw.githubusercontent.com/wilfgrainger/blog/25d67a697ac8bcee49f8c2eb2381f3fe559b5614/articles/whose-xg-is-it-anyway/images/01-cover.jpg)
 
-## 10:06 on Monday morning
+At 10:06 on Monday, the club's new AI recruitment assistant finds its next number nine.
 
-At 10:06 on a Monday morning, the club's new recruitment agent finds its striker.
+The brief is straightforward:
 
-The brief isn't especially exotic:
+> Find under-23 forwards in Europe with at least 900 league minutes and more than 0.55 non-penalty expected goals per 90. Exclude anyone obviously outside our budget.
 
-> Use the full 2025/26 domestic league season. Find under-23 centre-forwards in Europe with at least 2,000 league minutes and more than 0.55 non-penalty expected goals per 90. Exclude players who are obviously outside our budget.
+Thirty seconds later, Roberto McBaggio appears.
 
-About thirty seconds later, Roberto McBaggio appears.
+Twenty-one. Eighteen months left on his contract. Runs the channels. The assistant has even found six clips of him arriving between the centre-back and full-back.
 
-Twenty-one. Central Europe. Eighteen months left on his contract. He presses. He runs the channels. There are clips for every goal, every shot and every high turnover from the season.
+And then there is the number: **0.64 xG per 90.**
 
-And the numbers look excellent.
+For approximately nine glorious minutes, recruitment has been solved.
 
-- **34 league appearances, 30 starts, 2,684 minutes**
-- **17 goals, 5 assists**
-- **19.08 xG — 0.64 xG/90**
-- **5.84 xA — 0.20 xA/90**
-- **92 shots — 3.08/90**
-- **39 shots on target — 42.4%**
-- **178 touches in the opposition box — 5.97/90**
-- **31 key passes — 1.04/90**
-- **73 progressive carries — 2.45/90**
-- **486 pressures — 16.30/90**
-- **172 final-third pressures — 5.77/90**
-- **94 recoveries — 3.15/90**
-- **38 of 91 aerial duels won — 41.8%**
-- **49 of 96 take-ons completed — 51.0%**
-
-It's the sort of dataset you can stare at for far too long. There's enough there for a radar chart, a role profile, a shot map, half a dozen peer comparisons and, inevitably, a PowerPoint with a very serious title.
-
-The headline number is the one that matters for the screen: **0.64 xG per 90**.
-
-For about nine minutes, recruitment appears to have been solved.
-
-Then Mark, one of the analysts, asks:
+Then Mark, one of the analysts, asks two irritatingly short questions.
 
 > “Whose xG?”
 
-Nobody says anything.
+Nobody answers.
 
-Then:
+> “And did it remove the penalties?”
 
-> “Did it remove the penalties?”
+It did not.
 
-No.
+McBaggio is fictional. So are the club and the records below. The failure is a useful one to build on purpose.
 
-There are four penalties in the season total. At 0.79 xG each, they account for 3.16 of McBaggio's 19.08 xG.
+His 0.64 came from **7.27 total xG over 1,020 minutes**, all supplied by Provider A, model v3. But 2.37 of that came from three penalties: an average of 0.79 each in this invented dataset, not a universal penalty value.
 
-Nothing is wrong with the source data. That's worth being clear about. Provider A's `xG` field means total expected goals, and total expected goals includes penalties. The field is doing exactly what it says it does.
+Remove them:
 
-The problem is that the question asked for non-penalty xG.
+```text
+(7.27 − 2.37) ÷ 1,020 × 90 = 0.43 non-penalty xG per 90
+```
 
-Remove the penalties and the calculation is:
+He no longer meets the brief.
 
-> `(19.08 - 3.16) / 2,684 × 90 = 0.53`
+![McBaggio's total rate of 0.64 includes 0.21 penalty xG per 90. Removing those penalties leaves 0.43 non-penalty xG per 90, below the 0.55 recruitment threshold.](https://raw.githubusercontent.com/wilfgrainger/blog/25d67a697ac8bcee49f8c2eb2381f3fe559b5614/articles/whose-xg-is-it-anyway/images/02-metric-dissection.png)
 
-McBaggio doesn't pass the 0.55 screen.
+*The threshold applies to the non-penalty metric. The first answer crossed it using the wrong number. Values shown to two decimal places.*
 
-What I like about the example is that it can't be waved away as a small-sample issue. We've got a whole league season here: 2,684 minutes, 92 shots, plenty of event data, plenty of evidence.
+There is a second problem. Another candidate, Mateo Kovac, was scored by Provider B. The club approved Provider A, model v3 for this screen, yet the assistant ranked both providers' figures together.
 
-The system isn't short of data.
+The two mistakes need different repairs. Removing penalties fixes McBaggio's metric. It does nothing to establish whether another provider's outputs belong in the same ranking.
 
-It has misunderstood what one bit of that data means.
-
-There is a second problem too. The shortlist contains xG from two providers. Both fields are called `xG`, which looks reassuringly tidy, but the underlying models are different.
-
-So the agent has managed to make two perfectly respectable mistakes. It has used total xG when the question asked for non-penalty xG, and it has compared measurements that aren't necessarily comparable.
-
-The rows are real. The arithmetic is fine. The tool calls worked.
-
-The shortlist is still wrong.
-
-That, to me, is a more interesting class of failure than a hallucination. Nothing has been invented. The system has simply put legitimate things together in a way that changes their meaning.
-
----
-
-## The model knows football. It doesn't know our football.
-
-A couple of weeks earlier, the same assistant had a much safer job.
-
-Explain why a side can generate more xG from fewer shots. Summarise an opponent's build-up. Translate “rest defence” into something a board member can repeat without causing concern.
-
-It was good at that.
-
-That's roughly the territory large language models are happiest in: read some material, reason over it, produce more language. If the answer is a bit off, you get a bad paragraph.
-
-Once the system starts doing things, the stakes change. OpenAI's June 2026 analysis describes agents working for minutes or hours, using tools and iterating towards an outcome rather than simply answering a prompt. [OpenAI, *How agents are transforming work*, June 2026](https://openai.com/index/how-agents-are-transforming-work/).
-
-So the obvious first step is to teach it the club's rules.
-
-A few Markdown files will get you surprisingly far:
-
-- `RECRUITMENT_POLICY.md`
-- `APPROVED_DATA_SOURCES.md`
-- `METRIC_DEFINITIONS.md`
-- `WHEN_TO_ASK_MARK.md`
-
-I'm quite fond of this stage because it is cheap and slightly unfashionable. The files are easy to read, easy to change and easy to version. Retrieval can pull in the right definition when the agent needs it.
-
-Sometimes that's enough.
-
-Sometimes it isn't.
-
-The awkward bit is that retrieval can fetch the right definition and the agent can still apply it to the wrong field. It can retrieve Provider A's methodology and Provider B's methodology and still flatten both into a column called `xG`. It can retrieve an old contract perfectly even though a newer one superseded it.
-
-The document is available. The meaning can still drift.
-
-Before jumping to graphs and ontologies, there is a lot of ordinary engineering that should happen first: typed player IDs, sensible schemas, provider and model-version fields, data contracts, foreign keys, validation.
-
-Honestly, a decent Pydantic model and a few unpleasantly strict checks can save you from an impressive number of “AI” problems.
-
-You don't get extra points for using a graph database.
-
----
+McBaggio might be brilliant. He is still a red herring for this particular question.
 
 ## Five green ticks
 
-![Five green ticks can still produce the wrong striker](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/02-five-green-ticks.svg)
+The player lookup succeeded. The appearance query succeeded. The event query succeeded. The arithmetic succeeded. The shortlist write succeeded.
 
-Now give the agent some proper tools.
+Five green ticks. Wrong striker.
 
-Player search. Event data. Contracts. Video. A calculator. Maybe permission to write a shortlist back into the recruitment system.
+Nothing needed to be invented. The system could use real records, execute valid queries and calculate correctly while gradually answering a different question.
 
-Everything works.
+That is the failure I want to examine: **successful execution, invalid decision**.
 
-Player lookup: green.
+It is the football-data equivalent of entering the wrong stadium into the sat-nav. Every turn can be correct. You are still missing kick-off.
 
-Appearances: green.
+An agent makes this especially interesting because it can choose the next step. It searches for appearances, requests events, retrieves definitions, calculates a rate and writes a shortlist. Each action depends on what the previous result was taken to mean.
 
-Events: green.
+Anthropic's [guide to evaluating agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) makes a useful distinction between the transcript and the resulting state of the environment. A booking agent saying it booked a flight is different from a reservation existing in the database. Here, a persuasive explanation of the brief is different from a shortlist that satisfies it.
 
-Calculation: green.
+We should evaluate the decision the system produced, including the records it excluded and the comparisons it refused. Tool completion alone misses the interesting failure.
 
-Write to shortlist: green.
+## Start with the club handbook
 
-Five green ticks, and McBaggio is still the wrong striker for this particular screen.
+Two weeks earlier, the assistant had a smaller job: explain the opposition's build-up and translate “rest defence” into something a board member could repeat without frightening the coaching staff.
 
-This is where “the model hallucinated” becomes a bit too convenient as an explanation. It didn't. The failure is in how the pieces were composed.
+For that, a few good Markdown files were a sensible beginning:
 
-Choose the wrong competition and everything after that can be mathematically perfect. Join two similar player identities and you can produce a beautiful radar chart for a footballer who exists only in SQL. Mix two xG models and you can rank incomparable numbers to three decimal places.
+- `RECRUITMENT_POLICY.md`
+- `METRIC_DEFINITIONS.md`
+- `APPROVED_DATA_SOURCES.md`
+- `WHEN_TO_ASK_MARK.md`
 
-It reminds me of putting the wrong stadium into the sat-nav. The route can be flawless. You're still going to miss kick-off.
+The model knows football. These files describe **our club's football**: which competitions count, which provider we use, what “affordable” means and who resolves an uncertain contract record.
 
-Anthropic's January 2026 work on agent evaluations makes a similar point from a different direction: the model sits inside a wider harness of tools, state, instructions and environment, and you have to look at what actually happened in the environment rather than whether the transcript sounded convincing. [Anthropic, *Demystifying evals for AI agents*, January 2026](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents).
+Writing them is useful engineering. It exposes disagreements before anybody commissions a twelve-month “Football Knowledge Fabric” programme and orders the branded quarter-zips.
 
-Its April 2026 managed-agent architecture separates the “brain”, the “hands” and the “session” for much the same reason. [Anthropic, *Scaling Managed Agents: Decoupling the brain from the hands*, April 2026](https://www.anthropic.com/engineering/managed-agents).
+Retrieval helps bring the relevant section into context. It is an open-book exam with an extremely fast librarian.
 
-In football terms: the bit choosing what to do doesn't also have to be the bit that decides what counts as true.
+But the assistant can retrieve the correct definition of non-penalty xG and still use a column containing penalties. It can retrieve two providers' methodology notes and still combine their outputs. It can retrieve yesterday's contract perfectly after today's record has superseded it.
 
----
+**A retrieved definition is not an enforced invariant.**
 
-## xG is a particularly good trap
+This is also why a longer prompt, a stronger reasoning model or more attention over the supplied context does not settle the problem. Those may improve the model's choices. They do not, by themselves, impose a boundary on the data a tool accepts or the results a downstream system will commit.
 
-Expected goals sounds like a fact because it arrives as a number.
+The next step depends on the failure we need to prevent.
 
-It isn't.
+## Make this brief executable
 
-It's a model output.
+xG is a model output, rather than a fact found growing on the pitch. Providers can use different features and assign different probabilities to the same shot; [Hudl's explanation](https://www.hudl.com/blog/expected-goals-xg-explained) gives concrete examples.
 
-A July 2026 paper in *Intelligent Sports and Health* describes xG as a probability estimate based on things such as shot location, angle, body part and match context. Different model choices change the result and therefore the interpretation. [Lago-Peñas et al., *A probabilistic and dynamic reformulation of expected goals (xG): Methodological advances and modelling perspectives*, July 2026](https://doi.org/10.1016/j.ish.2026.05.001).
+A column called `xG` therefore leaves important questions unanswered. Which model produced it? Which shots belong in the population? Are penalties included? Do the minutes describe the same appearances?
 
-That's why a line saying “19.08 xG” isn't quite enough.
+For this screen, the club needs a small, explicit contract:
 
-Which provider?
+- Identify the player and evaluate age at the screening date.
+- Use the agreed league scope and season for both xG and minutes.
+- Accept Provider A, model v3; withhold other sources unless the club has approved a method of making them comparable.
+- Remove penalty xG and calculate per 90 using the qualifying minutes.
+- Apply the minimum of 900 minutes and the strict threshold of **more than** 0.55, before rounding.
+- Keep the evidence and the reason for each decision.
 
-Which model version?
+A typed record, a metric definition and ordinary validation code can do this. A graph database is not a prerequisite.
 
-Which competitions?
+The important boundary sits around the calculation and screening service. The model can request a screen, inspect its result and explain it. It cannot turn a validation failure into an accepted result by producing a stirring paragraph about movement in the box.
 
-What date range?
+![An agent submits a request to a deterministic screening service. The service checks an approved contract against candidate evidence and returns separate outcomes: rank, exclude, or withhold.](https://raw.githubusercontent.com/wilfgrainger/blog/25d67a697ac8bcee49f8c2eb2381f3fe559b5614/articles/whose-xg-is-it-anyway/images/03-decision-boundary.png)
 
-Are penalties in or out?
+*The contract and evidence are inputs to the checks. The model's explanation comes after the result; it cannot approve its own exception.*
 
-What counts as minutes?
+Those three outcomes matter:
 
-How has the number been aggregated?
+**Rank:** the evidence is usable and the player meets the brief.
 
-Football analysts ask these questions almost without thinking. They know that a neat column heading can hide a lot of decisions.
+**Exclude:** the evidence is usable and shows that the player fails the brief.
 
-Some of those decisions are documented.
+**Withhold:** the evidence is missing or incompatible, so the service cannot make that comparison.
 
-A surprising number are stored in Mark.
+“He does not qualify” and “we cannot establish whether he qualifies” should never become the same database flag. One is a finding. The other is unfinished work.
 
----
+## Try to break the shortlist
 
-## Mark knows what everybody else means
+The [companion example](https://github.com/wilfgrainger/blog/tree/25d67a697ac8bcee49f8c2eb2381f3fe559b5614/articles/whose-xg-is-it-anyway/example) contains three fictional players, one CSV and a small Python screen. It uses Python 3.10 or later and needs no model, API key or external package. From this article's directory:
 
-Mark knows that two records with the same name are different players.
+```bash
+python3 example/recruitment.py
+python3 -m unittest discover -s example -v
+```
 
-He knows which competitions count as “league” for this screen.
+First, the deliberately flawed screen ranks total xG per 90 without enforcing the provider rule. McBaggio comes first at 0.64, ahead of Mateo Kovac at 0.62 and Elliot Ward at 0.60.
 
-He knows that Provider A and Provider B shouldn't be mixed here.
+Then the validated screen applies the contract:
 
-He knows which contract record is current, which field includes penalties, and which feed to check when a number looks odd.
+- **Elliot Ward: ranked at 0.60.** His evidence meets the approved definitions and the threshold.
+- **Roberto McBaggio: excluded at 0.43.** His evidence is comparable, but his non-penalty rate is too low.
+- **Mateo Kovac: withheld.** His record uses Provider B, model v1. Under this policy, his apparent 0.62 cannot be used to rank him against Ward.
 
-In other words, Mark isn't just familiar with the data. He's carrying around a chunk of the club's operating model in his head.
+Ward leads the **validated subset**. We have not established that he is better than Kovac. The missing comparison belongs in the answer, where the recruitment team can see it.
 
-He is also, rather inconveniently, allowed to go on holiday.
+The example also changes every candidate to the unapproved provider. This time there is no validated ranking to return. A system that silently falls back to the incompatible values would recreate the original failure with better documentation.
 
-This is the bit that gets missed when people talk about “adding context” to agents. Most organisations already have plenty of context. It sits in code, SQL, spreadsheets, documents, Slack threads and people who know that “you never use that column for this”.
+The fixture is deliberately small. Ages and affordability are supplied screening facts. Aggregates and minutes are assumed to cover the same qualifying appearances. The code checks the declared evidence; it does not independently prove that a provider collected it correctly.
 
-The problem isn't that meaning doesn't exist.
+That limit is part of the example. Passing a contract proves compliance with the checks we implemented, not truth about the world. There is no LLM evaluation hidden in these results either: this is a test of the deterministic boundary an agent would call.
 
-The problem is that it often isn't explicit enough for software to share reliably.
+## Mark is an undocumented API
 
-Once the agent starts crossing the same joins Mark crosses mentally — player, competition, shots, provider, model version, minutes, contract, effective date — there comes a point where another page of prompt instructions starts to feel like the wrong fix.
+Mark already knows which columns to distrust.
 
-That's where formal semantics becomes useful.
+He knows that two Roberto McBaggio records describe different people, that the play-offs do not count for this screen, and that one contract feed is authoritative while another is useful mainly for starting arguments.
 
-Not before.
+Mark is an undocumented API with an annual-leave allowance.
 
----
+Some of what he knows resembles a latent ontology: the club's working concepts and relationships. Some is policy, some is data-quality knowledge, and some is judgement. Treating it all as one kind of “context” makes it harder to decide what to do with it.
 
-## Where an ontology is actually useful
+Our three-player example needs a small contract and checks. Now imagine the same concepts moving between scouting, medical, contracts, finance and several agents. Each system has its own player identifiers, competition definitions and understanding of which source wins.
 
-The word “ontology” can make a straightforward idea sound needlessly grand.
+The question changes from “can this service calculate the metric?” to “can these systems use the same concept without quietly redefining it?”
 
-For this problem, I mean something fairly practical: an agreed description of the important concepts in the domain and how they relate to one another.
+That is where an ontology can earn its place: as a formal, shared description of concepts and relationships. A semantic layer can map source-specific fields onto those agreed definitions. A knowledge graph can hold and connect actual instances when traversing those relationships is useful.
 
-A player makes appearances. Appearances happen in matches. Matches belong to competitions. Shots belong to appearances. An xG observation came from a particular provider and model version. A contract applies to a player for a defined period.
+These are separate responsibilities. Schemas and registries can also carry important meaning; an ontology has no monopoly on it. The choice should follow the boundaries across which that meaning must survive.
 
-That's the ontology.
+For a richer football system, I would want an evidence path from the player to qualifying appearances, from appearances to shots, and from each shot to its penalty status and provider/model version. The minutes must come from the same qualifying appearances. The result should identify the definition and policy versions used.
 
-A semantic layer makes those meanings available consistently to systems. A knowledge graph is one way of storing and traversing the actual relationships, if a graph is useful for the problem.
+That path makes the calculation reconstructable. Validation still has to check it. Merely drawing the relationships does not establish that required evidence is present or that the links are correct.
 
-It doesn't replace the database, and it certainly doesn't replace code.
+There is a technical wrinkle here for the ontology enthusiasts: OWL's open-world semantics do not mean that an absent field automatically fails a business rule. Completeness constraints still need explicit validation, whether in application code or, for RDF graphs, a mechanism such as [SHACL](https://www.w3.org/TR/shacl/). The [W3C OWL primer](https://www.w3.org/TR/owl2-primer/) explains the underlying distinction.
 
-The ontology won't remove penalties from McBaggio's xG. It tells us what a penalty is, what xG is, what “non-penalty xG” means and which relationships matter. Ordinary software can then enforce the rule.
+An ontology can publish the agreement. Someone still has to own that agreement, check the evidence and enforce the decision.
 
-For the recruitment screen, the evidence path might look like this:
+## 14:17. Same bug, different shirt
 
-> player → qualifying appearances → shots → penalty status → xG provider/model → aggregate → minutes → threshold decision
+At 14:17, an asset-management agent is checking a proposed trade.
 
-That path is much easier to inspect than “the agent worked it out”.
+Here is another fictional example. The mandate caps exposure at **£8 million per immediate legal parent**. The portfolio holds £6 million of Issuer A and proposes to buy £3 million of Issuer B. We keep currency and exposure amounts fixed so that the ownership relationship is the only thing changing.
 
-Now rerun the search.
+Yesterday's record places the issuers under different parents. On that view, the trade passes: £6 million in one group, £3 million in the other.
 
-![Forensic repair of the McBaggio xG calculation](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/03-mcbaggio-repair.svg)
+An ownership change became legally effective at **09:00 today**. Issuer B now shares Issuer A's parent. An authoritative notice describing that change was available at 09:15.
 
-McBaggio's 19.08 total xG becomes 15.92 non-penalty xG. Over 2,684 minutes, 0.64 xG/90 becomes **0.53 NPxG/90**.
+The agent has retrieved yesterday's record at 14:17.
 
-He drops below the threshold.
+It adds the numbers correctly and clears the trade against an ownership structure that is no longer current.
 
-The provider issue needs its own rule. If a few players can't be compared on the approved basis, leave them out and say why. If the whole cohort is contaminated by incompatible data, don't rank it.
+On the effective relationship, the proposed group exposure is **£6 million + £3 million = £9 million**. The £8 million limit is exceeded.
 
-That sounds obvious written down.
+![A fictional ownership change takes effect at 09:00 and is published at 09:15. At 14:17, yesterday's separate-parent snapshot would approve a trade, while the current shared-parent relationship produces £9 million of exposure against an £8 million limit.](https://raw.githubusercontent.com/wilfgrainger/blog/25d67a697ac8bcee49f8c2eb2381f3fe559b5614/articles/whose-xg-is-it-anyway/images/04-ownership-timeline.png)
 
-Systems do non-obvious things all the time when the only instruction is buried in prose.
+*A fresh retrieval can return a stale relationship. Legal effective time, source publication time and decision time answer different questions.*
 
-The useful change here isn't that the LLM has become cleverer. It hasn't.
+We have met McBaggio again. This time the wrong interpretation survives a limit check.
 
-We've made it harder for the surrounding system to quietly change the question.
+The repair requires an agreed definition of the relationship, its source, its period of validity and what supersedes it. If the system cannot establish the relationship effective at the decision time, it should withhold approval under this example's policy.
 
----
+“Use the newest document” is insufficient: a notice published today might describe a change that takes effect next month. Source freshness is necessary evidence, but it is not a substitute for the relationship's effective dates.
 
-## An ontology can be wrong too
+Real mandates have more involved definitions of grouping and exposure. The [Financial Industry Business Ontology](https://edmcouncil.org/financial-industry-business-ontology/) provides shared financial concepts and relationships; it does not make this toy mandate a universal rule, or make a stale source current.
 
-None of this creates a truth machine.
+The Bank/FCA AI Consortium's [June 2026 minutes](https://www.bankofengland.co.uk/minutes/2026/june/ai-consortium-minutes-3-june-2026) also discuss governance across whole AI systems and keeping agent actions within defined limits. Those are member discussions, not regulatory instructions for this example.
 
-A beautifully designed ontology can encode rubbish just as neatly as a spreadsheet can.
+Our engineering problem is concrete: the limit checker can enforce the arithmetic perfectly while the relationship supplied to it is wrong.
 
-McBaggio might have changed clubs yesterday. A provider might have changed its model midway through the season. Somebody might simply have linked the wrong player record.
+## Leave room for judgement. Be precise about authority.
 
-So the relationships need provenance, ownership, effective dates and some idea of what happens when sources disagree. Those are the boring controls that tend to end up in twelve-point text at the bottom of architecture diagrams, but they're doing most of the useful work.
+Some uncertainty is the point of the job.
 
-There is interesting research on creating ontologies dynamically. An August 2026 preprint, OaK, explores task-oriented ontologies and knowledge graphs for LLM agents and reports better grounding across several benchmarks. [Zhang et al., *Toward Effective and Reliable LLM Agents via Dynamic Ontology*, August 2026](https://arxiv.org/abs/2608.22974).
+Will McBaggio adapt to another league? Does his movement against a low block compensate for weaker numbers? A scout is supposed to form hypotheses. We should be suspicious of an architecture that claims to settle them.
 
-I'd still be careful about the distinction.
+I think of an **ambiguity budget** as the unresolved interpretation a workflow can tolerate before it needs more evidence, a person or a stop. Uncertainty about future potential belongs in scouting. Uncertainty about whether a “non-penalty” metric contains penalties belongs on the defect list.
 
-An agent can suggest that two concepts appear related. That doesn't mean it should be allowed to redefine an approved metric or legal relationship because the new interpretation makes its task easier.
+Then ask how much authority the agent has:
 
-And some things shouldn't be left to semantics at all.
+**Explain xG → recommend players → decide the shortlist → contact agents → submit an offer.**
 
-If the rule says “non-penalty xG from one approved model”, code can enforce that. It should.
+The underlying model could be identical at every stage. Its permissions and the consequences are not.
 
-There's no virtue in asking a probabilistic model to remember a deterministic rule every single time.
+As authority grows, I want stronger evidence requirements, controlled write access, an action log, a recovery plan where recovery is possible, and explicit approval for commitments. A generated explanation cannot grant those permissions or waive the checks.
 
----
+Nor should the agent silently rewrite the metric contract because it would produce a more satisfying answer. It can propose an exception for a person to assess. The proposal and the authorised change are different events.
 
-## How much uncertainty are we actually prepared to tolerate?
+## Build the smallest thing that catches McBaggio
 
-There are parts of recruitment where ambiguity is the point.
+My starting point would be one narrow workflow, a clear brief and examples of decisions an expert would reject.
 
-Will McBaggio adapt to another league?
+Write the definitions down. Agree who owns them. Give the agent the minimum tools it needs. Put the non-negotiable rules in the service that calculates or acts, then test the resulting decisions.
 
-Does his movement against a low block make up for weaker numbers elsewhere?
+The awkward cases are the useful ones: a duplicate player, an unapproved provider, a missing penalty field, mismatched minutes, a superseded relationship and a value exactly on the threshold. Include cases where the right answer is a refusal, as well as cases where a player should pass.
 
-Will he improve?
+I would measure false positives against expert-reviewed cases, missing-evidence cases incorrectly treated as valid, coverage of the intended candidate population, and how often Mark has to repair the same ambiguity. A high refusal rate may reveal poor data coverage rather than a trustworthy product. A low one may mean the service never learned to stop.
 
-You want scouts to argue about those things. That's judgement.
+Only then would I formalise more of the shared domain. If a registry and a few validators solve the problem, keep them. If the same definitions repeatedly diverge across systems, a shared ontology may help. If following relationships is central to the work, evaluate a graph.
 
-Whether “non-penalty xG” contains four penalties is not judgement. It's just wrong.
+Every component should have a failure it is responsible for preventing. Otherwise the architecture risks becoming an expensive illustration of the article.
 
-I've started thinking about that difference as an ambiguity budget: how much interpretation can this particular task tolerate before the system needs more evidence, a person, or a hard stop?
+## Back to Monday morning
 
-Then there is authority.
+The assistant reruns the screen.
 
-**Explain** — What does xG mean?  
-**Recommend** — Which strikers should we watch?  
-**Decide** — Build the final shortlist.  
-**Act** — Contact the agents.  
-**Commit** — Submit a £25 million offer.
+Elliot Ward leads the comparable subset. McBaggio is excluded by the numerical rule. Kovac is withheld pending comparable evidence. The explanation says all three things.
 
-Same model, potentially.
+Nothing about the LLM became more intelligent. The system now preserves the question long enough to answer it.
 
-Very different consequences.
+Evidence lives in source records. Definitions live in the shared contract. Code tests the rule. Permissions limit the action. Mark still decides what the numbers cannot.
 
-![The ambiguity budget and authority gradient](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/04-authority-ambiguity.svg)
+He looks at the revised shortlist and puts McBaggio back on the scouting list anyway. He likes his movement against a low block.
 
-Anthropic's May 2026 work on agent containment makes the security version of this argument: more capability and more access mean a larger potential blast radius, so hard permission and environmental boundaries matter alongside probabilistic safeguards. [Anthropic, *How we contain Claude across products*, May 2026](https://www.anthropic.com/engineering/how-we-contain-claude).
+That is fine. It is a recorded human judgement, made with the correct number in view.
 
-I wouldn't turn “ambiguity budget” into a new enterprise framework with a logo.
+The bug was allowing a machine to present different meanings as one comparable fact.
 
-But as a design question, it's useful: if the agent is allowed to do more, what assumptions are we still comfortable leaving fuzzy?
+Football made it easier to see.
 
-Usually, fewer than before.
-
----
-
-## At 14:17 the football disappears
-
-Later that afternoon, give the same architecture a different job.
-
-An asset-management agent needs to decide whether two issuers belong to the same corporate group before a trade is approved.
-
-It finds the entities. It finds an ownership relationship. It finds the mandate. The relationship check passes. The limit calculation passes. The trade is inside the numerical threshold.
-
-All green.
-
-Except the ownership relationship came from yesterday's source, and a newer filing says the intermediate holding company changed this morning.
-
-The names are right.
-
-The entities are right.
-
-The maths is right.
-
-The relationship is stale.
-
-It's McBaggio again, just with less entertaining nouns.
-
-Finance is full of apparently simple terms that become awkward once software has to act on them: issuer, obligor, guarantor, beneficial owner, counterparty, portfolio, exposure, mandate, instrument, legal entity. Most of them only make sense in relation to other things, at a particular time, often under a particular jurisdiction.
-
-The [Financial Industry Business Ontology, FIBO](https://edmcouncil.org/financial-industry-business-ontology/) exists to define financial concepts and relationships in machine-readable form. In August 2026, the EDM Association ran [*Why Your AI Needs an Ontology: Getting Started with FIBO*](https://edmconnect.edmcouncil.org/events/event-description?CalendarEventKey=4ed40715-05bb-441d-b6d0-01a001f902d3&Home=%2Fevents%2Fcalendar).
-
-I wouldn't take that as an instruction to import FIBO wholesale. The useful point is simpler: if several systems and agents are making decisions about the same concepts, it helps if they mean the same thing by them.
-
-The control side is moving in the same direction. The Bank of England's July 2026 Financial Stability Report discusses more autonomous AI in finance and Project Logos, a simulated environment for observing LLM-based agents acting as portfolio managers. [Bank of England, *Financial Stability Report*, July 2026](https://www.bankofengland.co.uk/financial-stability-report/2026/july-2026).
-
-Minutes from the Bank and FCA AI Consortium's 3 June 2026 meeting, published in August, discuss model harnesses and execution boundaries separating probabilistic reasoning from deterministic action. [Bank of England, *Artificial Intelligence Consortium minutes – June 2026*, published August 2026](https://www.bankofengland.co.uk/minutes/2026/june/ai-consortium-minutes-3-june-2026).
-
-That separation is important, but it doesn't solve the McBaggio problem on its own.
-
-An execution boundary can stop an agent breaching a trading limit. It can't save a calculation that used the wrong issuer relationship in the first place.
-
-The rule can be deterministic. The meaning inside the rule still has to be right.
-
----
-
-## I wouldn't start with an ontology
-
-If you're building an agent today, I wouldn't begin by announcing an ontology programme.
-
-Pick one workflow.
-
-Give the model decent instructions and the context it needs. Add retrieval. Use typed schemas. Put deterministic checks around rules that are genuinely deterministic.
-
-Then pay attention to where people keep correcting the system.
-
-You'll start collecting the awkward cases: duplicate entities, metrics that share a name but not a definition, policies that have been superseded, relationships that are only valid for a period, sources that disagree.
-
-If the same ambiguity keeps causing consequential mistakes across systems and teams, formalise it.
-
-Sometimes that means a schema.
-
-Sometimes a registry.
-
-Sometimes code.
-
-Sometimes an ontology.
-
-Sometimes a graph.
-
-And sometimes it means leaving the decision with Mark because judgement is actually what you're paying Mark for.
-
----
-
-## Back to Monday
-
-The query runs again.
-
-This time “non-penalty xG” has an explicit definition. The calculation service removes penalties. Provider compatibility is checked before ranking. “League” resolves to the competitions the club actually means.
-
-McBaggio isn't first any more.
-
-Another player moves above him.
-
-That player was there in the original data. Nothing magical happened to the model. We just stopped allowing a few different meanings to masquerade as the same fact.
-
-There is still uncertainty, obviously. There should be. Football recruitment would be fairly boring if a schema could tell you who to sign.
-
-The agent should be able to say:
-
-> I can't establish that from comparable evidence yet.
-
-That is a better answer than a confident ranking built on the wrong assumptions.
-
-Mark looks at the new shortlist.
-
-Then he puts McBaggio back on the scouting list anyway because he likes his movement against a low block.
-
-Fair enough.
-
-That part was never the bug.
-
-And at least now Mark might be able to go on holiday without taking half the club's data model with him.
+And Mark can finally go on holiday.
