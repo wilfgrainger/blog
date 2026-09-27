@@ -4,11 +4,9 @@ McBaggio looks like a decent find for a recruitment agent.
 
 Then Mark asks whether it removed the penalties.
 
-It hasn't. Four spot kicks bring his total xG to 19.08. For the non-penalty rate the club actually asked for, he lands at 0.53 — below the 0.55 cut-off.
+It hadn't. Four spot kicks bring his total xG to 19.08. For the non-penalty rate the club actually asked for, he lands at 0.53 — below the 0.55 cut-off.
 
-I made the club and player up, but the mistake is one I would test for in a real agent: a valid source field, correct arithmetic and the wrong decision. The article follows that mistake through provider comparisons, shared definitions and a fictional trade limit where a stale ownership relationship causes a £9m exposure to pass an £8m check.
-
-I end with a small local replay and an AgentCore deployment design: the screening call is allowed, McBaggio is excluded with the evidence attached, and an offer request is denied before the function runs. The replay is in the repo if you want to check the calculation and permission boundary yourself.
+I made the club and player up, but the problem is real enough: a valid field, correct arithmetic and the wrong decision. The article stays with the football example to show why a semantic layer needs to carry the meaning of the metric, the source and the rule across the whole screening process.
 
 Mark can still scout the lad. He just gets the right number first.
 

@@ -18,7 +18,7 @@
 
 <text x="68" y="126" fill="#fbf3e6" font-family="Georgia,serif" font-size="68" font-weight="700">Whose xG</text>
 <text x="68" y="198" fill="#fbf3e6" font-family="Georgia,serif" font-size="68" font-weight="700">Is It Anyway?</text>
-<text x="70" y="242" fill="#b8c8d1" font-family="Arial,Helvetica,sans-serif" font-size="23">When every tool is right and the decision is still wrong.</text>
+<text x="70" y="242" fill="#b8c8d1" font-family="Arial,Helvetica,sans-serif" font-size="23">A striker on the list for the wrong reason.</text>
 
 <path d="M108 488 C185 456 236 487 300 468 S438 403 508 420 S580 455 620 432"
       fill="none" stroke="#62dfc6" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 12"/>
@@ -64,7 +64,7 @@
 <rect x="754" y="465" width="376" height="54" rx="11" fill="#ffffff" stroke="#ddd7cb"/>
 <circle cx="783" cy="492" r="13" fill="#ef655e"/>
 <text x="783" y="498" text-anchor="middle" fill="white" font-family="Arial" font-size="15" font-weight="900">!</text>
-<text x="810" y="500" fill="#102333" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="800">Provider A ≠ Provider B</text>
+<text x="810" y="500" fill="#102333" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="800">Other players: Provider B</text>
 
 <line x1="754" y1="533" x2="1130" y2="533" stroke="#d7cebd" stroke-width="1.5"/>
 <text x="754" y="556" fill="#60717d" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="900" letter-spacing="1.4">AFTER THE EVIDENCE CHECK</text>
