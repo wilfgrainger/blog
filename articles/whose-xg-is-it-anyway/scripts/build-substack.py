@@ -11,17 +11,13 @@ RAW_IMAGES = (
     "https://raw.githubusercontent.com/wilfgrainger/blog/main/"
     "articles/whose-xg-is-it-anyway/images/"
 )
-EXAMPLE_URL = (
-    "https://github.com/wilfgrainger/blog/tree/main/"
-    "articles/whose-xg-is-it-anyway/examples"
-)
 
 
 def build() -> str:
     article = ARTICLE.read_text(encoding="utf-8")
     header = (
         "# Whose xG Is It Anyway?\n\n"
-        "*Five green ticks. One player on the wrong shortlist.*\n\n"
+        "*The striker passed the screen. Then Mark asked about the penalties.*\n\n"
     )
     if not article.startswith(header):
         raise ValueError("Article title or subtitle changed; review the export.")
@@ -30,15 +26,12 @@ def build() -> str:
         "01-hero",
         "02-five-green-ticks",
         "03-mcbaggio-repair",
-        "04-authority-ambiguity",
     ):
         source = f"(images/{name}.svg)"
         if text.count(source) != 1:
             raise ValueError(f"Expected one image reference: {source}")
         text = text.replace(source, f"({RAW_IMAGES}{name}.png)")
-    if text.count("(examples/)") != 1:
-        raise ValueError("Expected one replay link.")
-    return text.replace("(examples/)", f"({EXAMPLE_URL})")
+    return text
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
 <rect width="1200" height="675" fill="#fbf7ee"/>
-<text x="60" y="83" fill="#102333" font-family="Georgia,serif" font-size="54" font-weight="700">Five green ticks. Wrong striker.</text>
-<text x="62" y="122" fill="#61727d" font-family="Arial,Helvetica,sans-serif" font-size="22">Local success does not guarantee a valid composed decision.</text>
+<text x="60" y="83" fill="#102333" font-family="Georgia,serif" font-size="54" font-weight="700">Five green ticks. Wrong shortlist.</text>
+<text x="62" y="122" fill="#61727d" font-family="Arial,Helvetica,sans-serif" font-size="22">The agent used total xG for a non-penalty screen.</text>
 
 <rect x="60" y="164" width="1080" height="430" rx="28" fill="#073d35"/>
 <rect x="80" y="184" width="1040" height="390" rx="16" fill="none" stroke="#388174" stroke-width="2"/>
@@ -11,7 +11,7 @@
 <rect x="1026" y="278" width="94" height="202" fill="none" stroke="#388174" stroke-width="2"/>
 
 <rect x="108" y="210" width="380" height="54" rx="11" fill="#f2c94c"/>
-<text x="298" y="244" text-anchor="middle" fill="#102333" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="900">THE FAILURE IS IN THE COMPOSITION</text>
+<text x="298" y="244" text-anchor="middle" fill="#102333" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="900">EACH STEP PASSED. THE INPUT DIDN'T.</text>
 
 <path d="M160 478 C230 444 278 338 362 345 S485 450 585 407 S718 334 800 348 S930 453 1022 390"
       fill="none" stroke="#7be1c5" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 11"/>
@@ -47,5 +47,5 @@
   <path d="M103 -1 L121 17 M121 -1 L103 17" stroke="white" stroke-width="5" stroke-linecap="round"/>
 </g>
 
-<text x="62" y="635" fill="#102333" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="900">All five operations can succeed while the evidence chain is invalid.</text>
+<text x="62" y="635" fill="#102333" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="900">Five successes do not tell Mark which xG was used.</text>
 </svg>

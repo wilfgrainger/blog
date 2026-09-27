@@ -16,5 +16,3 @@ jobs:
         run: python3 articles/whose-xg-is-it-anyway/scripts/build-substack.py --check
       - name: Check image exports
         run: python3 articles/whose-xg-is-it-anyway/scripts/render-images.py --check
-      - name: Run local replay checks
-        run: python3 -m unittest discover -s articles/whose-xg-is-it-anyway/examples -v

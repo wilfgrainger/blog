@@ -1,7 +1,7 @@
 # Blog
 
 Source repository for Wilfred Grainger's long-form essays. Substack is the
-publication; this repository holds the editable source, figures, examples and
+publication; this repository holds the editable source, figures and
 publishing copy.
 
 ## Current essay
@@ -16,13 +16,12 @@ Within the [article directory](articles/whose-xg-is-it-anyway/):
 
 | File | Role |
 | --- | --- |
-| `article.md` | Edit this source. Relative figure and example links work on any branch. |
+| `article.md` | Edit this source. Relative figure links work on any branch. |
 | `substack.md` | Generated paste-ready body; do not edit directly. Title and subtitle go in Substack's fields. |
 | `publishing-kit.md` | Title, description, image order and final publication checks. |
 | `linkedin-launch.md` | Optional promotional draft; replace its article-link placeholder before use. |
 | `images/*.svg` | Editable figure sources. |
 | `images/*.png` | Rendered figures for Substack and other image uploads. |
-| `examples/` | Dependency-free local replay and tests of the fictional screen. |
 
 ## Before publishing
 
@@ -32,10 +31,9 @@ From the repository root:
 python3 articles/whose-xg-is-it-anyway/scripts/build-substack.py
 python3 articles/whose-xg-is-it-anyway/scripts/build-substack.py --check
 python3 articles/whose-xg-is-it-anyway/scripts/render-images.py --check
-python3 -m unittest discover -s articles/whose-xg-is-it-anyway/examples -v
 ```
 
-If an SVG changes, regenerate all four PNGs at 1,600 pixels wide with
+If an SVG changes, regenerate all three PNGs at 1,600 pixels wide with
 Inkscape, then inspect them:
 
 ```sh
