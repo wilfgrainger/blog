@@ -1,0 +1,18 @@
+{
+  "01-hero": {
+    "png_sha256": "ba7289821d4e973505b09ba7a5f7a31b758d46d26e9ec2282228d4d1bd587537",
+    "svg_sha256": "c66b221363b57d00cca9f581939cb8c457ff1b93f98e6a3534defe8bbe6d02fc"
+  },
+  "02-five-green-ticks": {
+    "png_sha256": "5f744693b36b3d4f7a16a424a22607ca4e099d6cd66a8886a5a72c2b33fa8532",
+    "svg_sha256": "cfaee57924f5b5ff9cf643917d7277d76ce737cac1f7d05df29f772c4802f0b0"
+  },
+  "03-mcbaggio-repair": {
+    "png_sha256": "20097b2428409bf03e78aa719de06c57531cba4dc1cc9cec3561a60b9e6c64f4",
+    "svg_sha256": "9a55324c2a749475ea86ff1d8c93407629ccbd1b99f9e153c4db3e45235862c0"
+  },
+  "04-authority-ambiguity": {
+    "png_sha256": "0bbd0a4107c0b8466e91aacf07e4846c165bc959b9335220543e7d4ba5c91e8d",
+    "svg_sha256": "44d18676477f47781af0436cc9f01fd3f998cac793e92c3f886106f6d360ee64"
+  }
+}

@@ -1,101 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
-<rect width="1200" height="760" fill="#fbf7ee"/>
-<text x="52" y="70" fill="#102333" font-family="Georgia,serif" font-size="49" font-weight="700">The McBaggio forensic review</text>
-<text x="54" y="106" fill="#61727d" font-family="Arial,Helvetica,sans-serif" font-size="21">One full season. Still the wrong answer.</text>
-
-<!-- left dossier -->
-<rect x="52" y="140" width="505" height="535" rx="22" fill="#fffdfa" stroke="#ddd4c5" stroke-width="2"/>
-<rect x="52" y="140" width="505" height="48" rx="22" fill="#ef5a53"/>
-<rect x="52" y="169" width="505" height="19" fill="#ef5a53"/>
-<text x="78" y="172" fill="white" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="900" letter-spacing="1.5">FULL 2025/26 LEAGUE DOSSIER</text>
-
-<text x="78" y="226" fill="#102333" font-family="Georgia,serif" font-size="28" font-weight="700">ROBERTO McBAGGIO</text>
-<text x="78" y="252" fill="#61727d" font-family="Arial,Helvetica,sans-serif" font-size="15">ST · age 21 · Provider A / model v3.4</text>
-
-<line x1="76" y1="272" x2="533" y2="272" stroke="#ddd4c5"/>
-<g font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
-  <text x="128" y="304" fill="#102333" font-size="23" font-weight="900">34 / 30</text><text x="128" y="325" fill="#667782" font-size="12">apps / starts</text>
-  <text x="246" y="304" fill="#102333" font-size="23" font-weight="900">2,684</text><text x="246" y="325" fill="#667782" font-size="12">minutes</text>
-  <text x="364" y="304" fill="#102333" font-size="23" font-weight="900">17</text><text x="364" y="325" fill="#667782" font-size="12">goals</text>
-  <text x="482" y="304" fill="#102333" font-size="23" font-weight="900">5</text><text x="482" y="325" fill="#667782" font-size="12">assists</text>
-
-  <text x="128" y="363" fill="#102333" font-size="22" font-weight="900">19.08</text><text x="128" y="383" fill="#667782" font-size="12">xG</text>
-  <text x="246" y="363" fill="#102333" font-size="22" font-weight="900">0.64</text><text x="246" y="383" fill="#667782" font-size="12">xG / 90</text>
-  <text x="364" y="363" fill="#102333" font-size="22" font-weight="900">5.84</text><text x="364" y="383" fill="#667782" font-size="12">xA</text>
-  <text x="482" y="363" fill="#102333" font-size="22" font-weight="900">0.20</text><text x="482" y="383" fill="#667782" font-size="12">xA / 90</text>
-
-  <text x="128" y="421" fill="#102333" font-size="22" font-weight="900">92</text><text x="128" y="441" fill="#667782" font-size="12">shots</text>
-  <text x="246" y="421" fill="#102333" font-size="22" font-weight="900">39</text><text x="246" y="441" fill="#667782" font-size="12">on target</text>
-  <text x="364" y="421" fill="#102333" font-size="22" font-weight="900">42.4%</text><text x="364" y="441" fill="#667782" font-size="12">shots on target</text>
-  <text x="482" y="421" fill="#102333" font-size="22" font-weight="900">178</text><text x="482" y="441" fill="#667782" font-size="12">opp. box touches</text>
-
-  <text x="128" y="479" fill="#102333" font-size="22" font-weight="900">5.97</text><text x="128" y="499" fill="#667782" font-size="12">box touches / 90</text>
-  <text x="246" y="479" fill="#102333" font-size="22" font-weight="900">31</text><text x="246" y="499" fill="#667782" font-size="12">key passes</text>
-  <text x="364" y="479" fill="#102333" font-size="22" font-weight="900">73</text><text x="364" y="499" fill="#667782" font-size="12">progressive carries</text>
-  <text x="482" y="479" fill="#102333" font-size="22" font-weight="900">486</text><text x="482" y="499" fill="#667782" font-size="12">pressures</text>
-
-  <text x="128" y="537" fill="#102333" font-size="22" font-weight="900">172</text><text x="128" y="557" fill="#667782" font-size="12">final-third pressures</text>
-  <text x="246" y="537" fill="#102333" font-size="22" font-weight="900">94</text><text x="246" y="557" fill="#667782" font-size="12">recoveries</text>
-  <text x="364" y="537" fill="#102333" font-size="22" font-weight="900">41.8%</text><text x="364" y="557" fill="#667782" font-size="12">aerial win rate</text>
-  <text x="482" y="537" fill="#102333" font-size="22" font-weight="900">51.0%</text><text x="482" y="557" fill="#667782" font-size="12">take-on completion</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="940" viewBox="0 0 800 940" role="img" aria-labelledby="title desc">
+<title id="title">McBaggio, checked.</title>
+<desc id="desc">From the same full 2025/26 league season: subtract 3.16 penalty xG from 19.08 total xG to get 15.92 non-penalty xG. Divide by 2,684 matching league minutes and multiply by 90: 0.53 non-penalty xG per 90. Excluded by the screen requiring more than 0.55.</desc>
+<rect width="800" height="940" fill="#fbf7ee"/>
+<text x="42" y="76" fill="#102333" font-family="Georgia,serif" font-size="54" font-weight="700">McBaggio, checked.</text>
+<text x="44" y="122" fill="#536876" font-family="Arial,Helvetica,sans-serif" font-size="30">2025/26 league · Provider A / v3.4</text>
+<rect x="40" y="157" width="720" height="324" rx="22" fill="#fffdfa" stroke="#ddd4c5" stroke-width="2"/>
+<g font-family="Arial,Helvetica,sans-serif">
+  <text x="76" y="207" fill="#536876" font-size="30" font-weight="700">REMOVE THE FOUR PENALTIES</text>
+  <text x="76" y="301" fill="#102333" font-size="82" font-weight="800">19.08</text>
+  <text x="378" y="289" fill="#d64d47" font-size="60">−</text>
+  <text x="490" y="301" fill="#b73d36" font-size="82" font-weight="800">3.16</text>
+  <text x="78" y="343" fill="#536876" font-size="32">total xG</text>
+  <text x="490" y="343" fill="#536876" font-size="32">penalty xG</text>
+  <line x1="76" y1="371" x2="724" y2="371" stroke="#ddd4c5" stroke-width="2"/>
+  <text x="76" y="450" fill="#0b7965" font-size="72" font-weight="800">15.92</text>
+  <text x="325" y="438" fill="#102333" font-size="34">non-penalty xG</text>
 </g>
-
-<g stroke="#e6ded1">
-  <line x1="76" y1="335" x2="533" y2="335"/><line x1="76" y1="393" x2="533" y2="393"/>
-  <line x1="76" y1="451" x2="533" y2="451"/><line x1="76" y1="509" x2="533" y2="509"/>
-  <line x1="187" y1="282" x2="187" y2="570"/><line x1="305" y1="282" x2="305" y2="570"/><line x1="423" y1="282" x2="423" y2="570"/>
+<rect x="40" y="510" width="720" height="360" rx="22" fill="#08263a"/>
+<g font-family="Arial,Helvetica,sans-serif">
+  <text x="76" y="560" fill="#9ce6d3" font-size="30" font-weight="700">USE THE MATCHING MINUTES</text>
+  <text x="76" y="626" fill="#fbf3e6" font-size="46">15.92 ÷ 2,684 × 90</text>
+  <text x="70" y="746" fill="#fbf3e6" font-size="112" font-weight="800">0.53</text>
+  <text x="365" y="698" fill="#c2d4dd" font-size="34">non-penalty xG</text>
+  <text x="365" y="743" fill="#c2d4dd" font-size="34">per 90 minutes</text>
+  <rect x="76" y="783" width="648" height="58" rx="11" fill="#ffe2dc"/>
+  <text x="400" y="822" text-anchor="middle" fill="#922f2a" font-size="30" font-weight="700">EXCLUDED · needs more than 0.55</text>
 </g>
-
-<rect x="76" y="592" width="457" height="58" rx="12" fill="#fff0ee"/>
-<circle cx="100" cy="621" r="12" fill="#ef5a53"/>
-<text x="100" y="626" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="900">!</text>
-<text x="124" y="616" fill="#102333" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="900">4 penalties are still included</text>
-<text x="124" y="637" fill="#667782" font-family="Arial,Helvetica,sans-serif" font-size="13">Provider semantics matter.</text>
-<text x="506" y="616" text-anchor="end" fill="#d94a43" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="900">SAME SOURCE DATA</text>
-<text x="506" y="635" text-anchor="end" fill="#d94a43" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="900">AS ORIGINAL ANALYSIS</text>
-
-<!-- arrow -->
-<circle cx="606" cy="407" r="31" fill="#f2c94c"/>
-<text x="606" y="417" text-anchor="middle" fill="#102333" font-family="Arial" font-size="30" font-weight="900">→</text>
-<text x="606" y="450" text-anchor="middle" fill="#61727d" font-family="Arial" font-size="12" font-weight="900">CHECK</text>
-
-<!-- right evidence result -->
-<rect x="655" y="140" width="493" height="535" rx="22" fill="#08263a"/>
-<text x="684" y="179" fill="#7be1c5" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="900" letter-spacing="1.5">EVIDENCE-BACKED RESULT</text>
-
-<text x="684" y="279" fill="#fbf3e6" font-family="Georgia,serif" font-size="78" font-weight="700">0.53</text>
-<text x="874" y="266" fill="#b8c8d1" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="900">NPxG / 90</text>
-<rect x="1023" y="214" width="99" height="50" rx="12" fill="#ef554d"/>
-<text x="1072" y="246" text-anchor="middle" fill="white" font-family="Arial" font-size="19" font-weight="900">&lt; 0.55</text>
-
-<line x1="684" y1="300" x2="1118" y2="300" stroke="#456072"/>
-<text x="684" y="335" fill="#e9edf0" font-family="Arial,Helvetica,sans-serif" font-size="20">19.08 xG − 3.16 penalty xG = <tspan fill="#f2c94c" font-weight="900">15.92 NPxG</tspan></text>
-<text x="684" y="369" fill="#e9edf0" font-family="Arial,Helvetica,sans-serif" font-size="20">(15.92 ÷ 2,684) × 90 = <tspan fill="#f2c94c" font-weight="900">0.53</tspan></text>
-
-<g font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
-  <rect x="684" y="401" width="100" height="94" rx="12" fill="#0f4354" stroke="#236276"/>
-  <text x="734" y="437" fill="#9ce6d3" font-size="24" font-weight="900">15.92</text><text x="734" y="462" fill="white" font-size="12" font-weight="800">NPxG</text><text x="734" y="480" fill="#b8c8d1" font-size="10">(non-penalty)</text>
-
-  <rect x="795" y="401" width="100" height="94" rx="12" fill="#0f4354" stroke="#236276"/>
-  <text x="845" y="437" fill="#9ce6d3" font-size="24" font-weight="900">88</text><text x="845" y="462" fill="white" font-size="12" font-weight="800">non-penalty</text><text x="845" y="480" fill="#b8c8d1" font-size="10">shots</text>
-
-  <rect x="906" y="401" width="100" height="94" rx="12" fill="#0f4354" stroke="#236276"/>
-  <text x="956" y="437" fill="#9ce6d3" font-size="24" font-weight="900">0.181</text><text x="956" y="462" fill="white" font-size="12" font-weight="800">NPxG / shot</text><text x="956" y="480" fill="#b8c8d1" font-size="10">(non-penalty)</text>
-
-  <rect x="1017" y="401" width="100" height="94" rx="12" fill="#0f4354" stroke="#236276"/>
-  <text x="1067" y="437" fill="#9ce6d3" font-size="24" font-weight="900">13</text><text x="1067" y="462" fill="white" font-size="12" font-weight="800">non-penalty</text><text x="1067" y="480" fill="#b8c8d1" font-size="10">goals</text>
-</g>
-
-<line x1="684" y1="523" x2="1118" y2="523" stroke="#456072"/>
-<text x="684" y="550" fill="#a9bcc8" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="900" letter-spacing="1.5">SEMANTIC CONTROLS (DETERMINISTIC)</text>
-
-<g font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="900" text-anchor="middle">
-  <rect x="684" y="568" width="101" height="38" rx="9" fill="#0e8769"/><text x="734" y="592" fill="white">penalty = false</text>
-  <rect x="794" y="568" width="119" height="38" rx="9" fill="#0e8769"/><text x="854" y="592" fill="white">provider = A / v3.4</text>
-  <rect x="922" y="568" width="92" height="38" rx="9" fill="#0e8769"/><text x="968" y="592" fill="white">scope = league</text>
-  <rect x="1023" y="568" width="95" height="38" rx="9" fill="#0e8769"/><text x="1070" y="592" fill="white">season = 25/26</text>
-</g>
-
-<rect x="52" y="700" width="1096" height="40" rx="11" fill="#eee5d7"/>
-<text x="600" y="726" text-anchor="middle" fill="#102333" font-family="Georgia,serif" font-size="20" font-weight="700">The data was deep. The semantic contract was shallow.</text>
+<text x="400" y="918" text-anchor="middle" fill="#102333" font-family="Georgia,serif" font-size="34" font-weight="700">Same season. Correct metric.</text>
 </svg>

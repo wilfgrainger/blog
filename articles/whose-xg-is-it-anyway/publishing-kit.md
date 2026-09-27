@@ -4,39 +4,34 @@
 Whose xG Is It Anyway?
 
 ## Subtitle
-An AI analyses a full season and finds the perfect striker. Every tool returns green. The answer is still wrong. A football story about the point where retrieval stops being enough.
+Five green ticks. One player on the wrong shortlist.
 
 ## Preview / social description
-Thirty-four appearances. 2,684 minutes. Ninety-two shots. Five green ticks. Wrong striker. What happens when an AI agent has a full season of real-looking data, calculates correctly, and still makes the wrong decision? The problem is not volume. It is meaning.
+A fictional striker looks like a find at 0.64 xG per 90. Mark asks whether the agent removed four penalties. It didn't, and the non-penalty rate is 0.53—below the club's 0.55 cut-off. The arithmetic worked. The feedback around the decision didn't. What would it take to build a screen that can show its evidence, admit when players cannot be compared, and stop before an unauthorised offer?
 
 ## Hero
-https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/01-hero.svg
+https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/01-hero.png
 
 ## Image sequence
-1. Hero — immediately below the title/subtitle.
-2. Five green ticks — directly below the “Five green ticks. Wrong striker.” heading.
-3. McBaggio forensic review — immediately after “Now rerun the search.”
-4. Authority / ambiguity — immediately after the Explain → Recommend → Decide → Act → Commit sequence.
-
-Do not add more diagrams. Four is enough and each has a distinct editorial job.
+1. Hero — below the title/subtitle.
+2. Five green ticks — after “Why everything looked green”.
+3. McBaggio calculation — after the excluded/withheld distinction.
+4. Authority / ambiguity — after “How much can the agent assume?”
 
 ## Pull quotes
-> Every row is real. The arithmetic is correct. Every tool returned green. The shortlist is wrong.
+> The agent hasn't made up a player or invented a number. That is what makes the mistake easy to miss.
 
-> Organisations do not usually lack meaning. They lack explicit, shared, machine-checkable meaning.
+> A shared definition that nobody can challenge will become another green tick.
 
-> The more authority an agent has, the smaller its ambiguity budget should become.
-
-Optional visual/social quote:
-> Mark is, in effect, an undocumented API with an annual-leave allowance.
+> The greater the authority to act, the less room there is to guess.
 
 ## Suggested tags
-AI agents · Data architecture · Ontology · Financial services · Football analytics
+AI agents · Football analytics · Systems thinking · Data architecture · Financial services
 
 ## Publish check
-- Keep the McBaggio fiction clearly framed as fictional.
-- Preserve all source links.
-- Keep the first screen clean: title, subtitle, hero, then straight into 10:06.
-- Do not insert a contents section.
-- Do not add a generic AI-generated conclusion or call-to-action.
-- Let the final Mark-on-holiday line remain the last line.
+- The player, club, season dossier and investment mandate are fictional. Keep that clear in promotion.
+- Run `python3 scripts/build-substack.py` from this directory to rebuild `substack.md`, then run it with `--check` to verify. Set the title and subtitle in Substack's own fields.
+- Keep four images and their alt text. The PNGs sit beside the editable SVGs. Check readability on mobile and upload the PNGs in the editor if pasted Markdown leaves links instead of images.
+- The generated image and replay links target `main`; merge the reviewed PR before publishing those links.
+- The local replay is a demonstration of the metric and permission boundary, not a live AgentCore deployment.
+- Leave the final watchlist decision and last sentence as the ending. No added call to action.
