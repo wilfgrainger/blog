@@ -10,7 +10,7 @@ Five green ticks. One player on the wrong shortlist.
 A fictional striker looks like a find at 0.64 xG per 90. Mark asks whether the agent removed four penalties. It didn't, and the non-penalty rate is 0.53—below the club's 0.55 cut-off. The arithmetic worked. The feedback around the decision didn't. What would it take to build a screen that can show its evidence, admit when players cannot be compared, and stop before an unauthorised offer?
 
 ## Hero
-https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/01-hero.svg
+https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/01-hero.png
 
 ## Image sequence
 1. Hero — below the title/subtitle.
@@ -30,8 +30,8 @@ AI agents · Football analytics · Systems thinking · Data architecture · Fina
 
 ## Publish check
 - The player, club, season dossier and investment mandate are fictional. Keep that clear in promotion.
-- Paste `substack.md` as the body, and set the title and subtitle in Substack's own fields.
-- Keep four images and their alt text. Check readability on mobile and export PNGs if Substack will not accept the SVGs.
-- The images and local replay links target `main`; merge the reviewed PR before publishing those links.
+- Run `python3 scripts/build-substack.py` from this directory to rebuild `substack.md`, then run it with `--check` to verify. Set the title and subtitle in Substack's own fields.
+- Keep four images and their alt text. The PNGs sit beside the editable SVGs. Check readability on mobile and upload the PNGs in the editor if pasted Markdown leaves links instead of images.
+- The generated image and replay links target `main`; merge the reviewed PR before publishing those links.
 - The local replay is a demonstration of the metric and permission boundary, not a live AgentCore deployment.
 - Leave the final watchlist decision and last sentence as the ending. No added call to action.

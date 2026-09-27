@@ -2,7 +2,7 @@
 
 *Five green ticks. One player on the wrong shortlist.*
 
-![A scouting dashboard puts McBaggio at 0.64 total xG per 90, then flags four penalties and a provider mismatch before showing 0.53 non-penalty xG per 90.](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/01-hero.svg)
+![A scouting dashboard puts McBaggio at 0.64 total xG per 90, then flags four penalties and a provider mismatch before showing 0.53 non-penalty xG per 90.](images/01-hero.svg)
 
 The recruitment agent has been running for thirty seconds when it puts Roberto McBaggio at the top of the list. He is 21, has eighteen months left on his contract, and the budget check hasn't ruled him out. In the clips he keeps arriving at the near post just before the defender. Mark, the club's analyst, could happily spend the afternoon watching him.
 
@@ -24,7 +24,7 @@ The agent hasn't made up a player or invented a number. That is what makes the m
 
 ## Why everything looked green
 
-![Five green checks for lookup, minutes, xG, ranking and writing a shortlist still put McBaggio wrongly in first place; the problem is how the evidence was combined.](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/02-five-green-ticks.svg)
+![Five green checks for lookup, minutes, xG, ranking and writing a shortlist still put McBaggio wrongly in first place; the problem is how the evidence was combined.](images/02-five-green-ticks.svg)
 
 Player lookup worked. The appearances and shot events came back. The arithmetic ran. The shortlist was written. Each tool could report success without knowing that the original request said *non-penalty*.
 
@@ -44,7 +44,7 @@ Putting those pages in a prompt helps the agent find them. It does not guarantee
 
 That service can distinguish two results the original shortlist blurred. McBaggio is **excluded**: there is enough approved evidence to say he misses this screen. A Provider B-only candidate is **withheld**: under this fictional club's policy, the available feed cannot support comparison. Calling that player a poor performer would be fiction piled on fiction.
 
-![McBaggio's 19.08 total xG minus 3.16 penalty xG leaves 15.92 non-penalty xG across 2,684 minutes: 0.53 per 90, below the 0.55 cut-off.](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/03-mcbaggio-repair.svg)
+![McBaggio's 19.08 total xG minus 3.16 penalty xG leaves 15.92 non-penalty xG across 2,684 minutes: 0.53 per 90, below the 0.55 cut-off.](images/03-mcbaggio-repair.svg)
 
 A typed contract and strict code could handle this screen. The case for something more shared appears when scouting, medical, contracts, finance and several agents all have their own near-matches for “player”, “appearance” and “season”. You find yourself repairing the same misunderstanding at every hand-off.
 
@@ -58,7 +58,7 @@ Mark may think McBaggio is unusually good against a low block. He can disagree w
 
 I've taken to thinking of this as an *ambiguity budget*. A chat answer about xG can survive a loose explanation and a follow-up question. A shortlist sent to a recruitment meeting needs traceable evidence. A £25 million offer cannot rest on an unresolved player identity, an unapproved source comparison or a model's persuasive explanation of why it probably meant well. The greater the authority to act, the less room there is to guess.
 
-![From explain to recommend, decide, act and commit, the diagram shows less tolerated ambiguity and stronger controls; the example commitment is a £25 million offer.](https://raw.githubusercontent.com/wilfgrainger/blog/main/articles/whose-xg-is-it-anyway/images/04-authority-ambiguity.svg)
+![From explain to recommend, decide, act and commit, the diagram shows less tolerated ambiguity and stronger controls; the example commitment is a £25 million offer.](images/04-authority-ambiguity.svg)
 
 That drawing is a design prompt, not a measured risk curve. The practical question is who can stop the next step, on what evidence, and whether the stop actually holds. Otherwise the agent has merely learned to write a very convincing exception request to itself.
 
@@ -72,7 +72,7 @@ I would give the recruitment agent one `screen_recruits` service. It returns a r
 
 If I were deploying it on AWS, [Bedrock AgentCore Runtime](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html) could run the agent, [Gateway](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-core-concepts.html) could expose the screening tool, and [AgentCore Policy](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/use-gateway-with-policy.html) could let a recruitment role request a screen while denying an offer submission. The penalty subtraction and provider rules belong inside the screening service. A permission check cannot tell you what xG means.
 
-I put together a [small local replay](https://github.com/wilfgrainger/blog/tree/main/articles/whose-xg-is-it-anyway/examples) to make that distinction testable. With McBaggio's full-season evidence, an authorised screen returns **excluded, 0.53, required > 0.55**. A Provider B-only candidate comes back **withheld**. A request to submit a £25 million offer is denied before the offer function runs. The replay tests those behaviours locally; it is not a deployed AgentCore policy.
+I put together a [small local replay](examples/) to make that distinction testable. With McBaggio's full-season evidence, an authorised screen returns **excluded, 0.53, required > 0.55**. A Provider B-only candidate comes back **withheld**. A request to submit a £25 million offer is denied before the offer function runs. The replay tests those behaviours locally; it is not a deployed AgentCore policy.
 
 Mark can now look at the shortlist and see both the decision and the route back to the evidence. He can still say that McBaggio's near-post runs are worth another look. In fact, he puts him on the watchlist.
 
